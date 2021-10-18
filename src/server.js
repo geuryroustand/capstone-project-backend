@@ -1,0 +1,52 @@
+import express from "express";
+import listEndpoints from "express-list-endpoints";
+import cors from "cors";
+import mongoose from "mongoose";
+
+import {
+  notFoundErrHandler,
+  forbiddenErrHandler,
+  badReqErrHandler,
+  serverErrHandler,
+} from "./errorHandlers.js";
+const server = express();
+
+const port = process.env.PORT;
+
+const whiteList = [process.env.FE_DEV_URL, process.env.FE_PROD_URL];
+
+const corsOpts = {
+  origin: function (origin, next) {
+    if (!origin || whiteList.indexOf(origin) !== -1) {
+      next(null, true);
+    } else {
+      next(new Error(`Origin ${origin} not allowed!`));
+    }
+  },
+};
+
+//************************MIDDLEWARE***********************
+
+server.use(cors(corsOpts));
+server.use(express.json());
+
+//************************ERROR MIDDLEWARE***********************
+
+server.use(notFoundErrHandler);
+server.use(forbiddenErrHandler);
+server.use(badReqErrHandler);
+server.use(serverErrHandler);
+
+mongoose.connect(process.env.MONGO_CONNECTION);
+
+mongoose.connection.on("connected", () => {
+  console.log("😊Successfully connected to mongo!🥰 😎");
+  server.listen(port, () => {
+    console.table(listEndpoints(server));
+    console.log("server listing on port " + port);
+  });
+});
+
+mongoose.connection.on("error", (err) => {
+  console.error("Mongo error : 🧨⛔🎇😬 :", err);
+});
