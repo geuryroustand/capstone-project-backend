@@ -9,6 +9,8 @@ import {
   badReqErrHandler,
   serverErrHandler,
 } from "./errorHandlers.js";
+import locationsRouter from "./services/locations/index.js";
+import addPrivatePriceRouter from "./services/airportPrivatePrices/index.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -29,6 +31,9 @@ const corsOpts = {
 
 server.use(cors(corsOpts));
 server.use(express.json());
+
+//************************ROUTERS**************************
+server.use("/locations", locationsRouter, addPrivatePriceRouter);
 
 //************************ERROR MIDDLEWARE***********************
 
