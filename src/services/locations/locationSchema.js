@@ -8,6 +8,7 @@ const locationSchema = new Schema({
     required: ["Location`s name is required", true],
     unique: ["Location`s name must be unique", true],
   },
+  // locationsPrices: [{ type: Schema.Types.ObjectId, ref: "privatePrices" }],
 });
 
 export default model("location", locationSchema);
