@@ -18,6 +18,18 @@ const privateTransferSchema = new Schema({
   //   },
   // ],
 
+  // pickupPlace: {
+  //   type: Schema.Types.ObjectId,
+  //   required: ["pickupPlace is required", true],
+  //   ref: "location",
+  // },
+
+  // dropPlace: {
+  //   type: Schema.Types.ObjectId,
+  //   required: ["dropPlace is  required", true],
+  //   ref: "location",
+  // },
+
   pickupPlace: [
     {
       type: Schema.Types.ObjectId,

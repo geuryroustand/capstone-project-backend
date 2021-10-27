@@ -1,13 +1,45 @@
 import locationSchema from "./locationSchema.js";
-
+import q2m from "query-to-mongo";
 import express from "express";
 
 const locationsRouter = express.Router();
 
 locationsRouter.get("/", async (req, res, next) => {
   try {
-    const getLocations = await locationSchema.find();
+    const query = q2m(req.query);
+    const query1 = req.query;
+    console.log(query1);
+    const getLocations = await locationSchema
+      .find(query.criteria, query.options.fields)
+      .limit(query.options.limit)
+      .skip(query.options.skip)
+      .sort(query.options.sort);
     // .populate("locationsPrices");
+
+    res.send(getLocations);
+  } catch (error) {
+    next(error);
+  }
+});
+
+locationsRouter.post("/", async (req, res, next) => {
+  try {
+    let payload = req.body.payload.trim();
+
+    const query = q2m(req.query);
+    const query1 = req.query;
+    console.log(query1);
+    const getLocations = await locationSchema
+      // new RegExp("/^" + query + "/", "i")
+      // { location: { $regex: new RegExp("^" + query + ".*", "i") } }
+      .find({ location: { $regex: new RegExp("^" + payload + ".*", "i") } })
+      .exec();
+
+    // .limit(query.options.limit)
+    // .skip(query.options.skip)
+    // .sort(query.options.sort);
+    // .populate("locationsPrices");
+
     res.send(getLocations);
   } catch (error) {
     next(error);
