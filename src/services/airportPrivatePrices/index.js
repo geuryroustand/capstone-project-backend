@@ -40,8 +40,8 @@ addPrivatePriceRouter.get("/addPrices", async (req, res, next) => {
 
     console.log("=============================================");
 
-    console.log(drop.location);
-    console.log(pick.location);
+    // console.log(drop.location);
+    // console.log(pick.location);
     // const findBothT = await privateTransfersSchema.find({
     //   " location.dropPlace": a.location,
     // });

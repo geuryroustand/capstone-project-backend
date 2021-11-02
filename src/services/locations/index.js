@@ -22,29 +22,29 @@ locationsRouter.get("/", async (req, res, next) => {
   }
 });
 
-locationsRouter.post("/", async (req, res, next) => {
-  try {
-    let payload = req.body.payload.trim();
+// locationsRouter.post("/", async (req, res, next) => {
+//   try {
+//     let payload = req.body.payload.trim();
 
-    const query = q2m(req.query);
-    const query1 = req.query;
-    console.log(query1);
-    const getLocations = await locationSchema
-      // new RegExp("/^" + query + "/", "i")
-      // { location: { $regex: new RegExp("^" + query + ".*", "i") } }
-      .find({ location: { $regex: new RegExp("^" + payload + ".*", "i") } })
-      .exec();
+//     const query = q2m(req.query);
+//     const query1 = req.query;
+//     console.log(query1);
+//     const getLocations = await locationSchema
+//       // new RegExp("/^" + query + "/", "i")
+//       // { location: { $regex: new RegExp("^" + query + ".*", "i") } }
+//       .find({ location: { $regex: new RegExp("^" + payload + ".*", "i") } })
+//       .exec();
 
-    // .limit(query.options.limit)
-    // .skip(query.options.skip)
-    // .sort(query.options.sort);
-    // .populate("locationsPrices");
+//     // .limit(query.options.limit)
+//     // .skip(query.options.skip)
+//     // .sort(query.options.sort);
+//     // .populate("locationsPrices");
 
-    res.send(getLocations);
-  } catch (error) {
-    next(error);
-  }
-});
+//     res.send(getLocations);
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 locationsRouter.post("/", async (req, res, next) => {
   try {

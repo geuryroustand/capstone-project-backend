@@ -26,6 +26,14 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
+// const plainPW = "abc";
+
+// console.time("a");
+
+// const hast = bcrypt.hashSync(plainPW, 12);
+// console.log(hast);
+// console.timeEnd("a");
+
 userSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 12);
@@ -33,9 +41,14 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
+userSchema.methods.toJSON = function () {
+  const user = this.toObject();
+  delete user.password;
+};
+
 userSchema.statics.checkUser = async function (email, userPassword) {
   const findUser = await this.findOne({ email });
-  console.log(findUser.email, findUser.password);
+
   if (await bcrypt.compare(userPassword, findUser.password)) {
     return findUser;
   } else {

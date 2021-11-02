@@ -17,6 +17,7 @@ export const JWTAuthMiddleware = async (req, res, next) => {
     try {
       const token = req.headers.authorization.replace("Bearer ", "");
       const decodedToken = await verifyJWT(token);
+
       const user = await userSchema.findById(decodedToken._id);
       if (user) {
         req.user = user;

@@ -38,10 +38,8 @@ userRouter.post("/login", async (req, res, next) => {
     const userFound = await userModel.checkUser(email, password);
 
     if (userFound) {
-      const { tokenGenerate, refreshTokenGenerate } = await JWTAuthenticate(
-        userFound
-      );
-      res.send({ tokenGenerate, refreshTokenGenerate });
+      const { accessToken, refreshToken } = await JWTAuthenticate(userFound);
+      res.send({ accessToken, refreshToken });
       next();
     } else {
       console.log("Credentials are not ok!");
