@@ -31,7 +31,7 @@ const corsOpts = {
 
 //************************MIDDLEWARE***********************
 
-server.use(cors(corsOpts));
+server.use(cors());
 server.use(express.json());
 
 //************************ROUTERS**************************
