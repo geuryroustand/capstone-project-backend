@@ -46,6 +46,7 @@ server.use(forbiddenErrHandler);
 server.use(badReqErrHandler);
 server.use(serverErrHandler);
 
+console.log(process.env.MONGO_CONNECTION);
 mongoose.connect(process.env.MONGO_CONNECTION);
 
 mongoose.connection.on("connected", () => {
