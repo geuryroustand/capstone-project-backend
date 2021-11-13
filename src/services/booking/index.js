@@ -55,10 +55,33 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
   try {
     const domainUrl = process.env.FRONTEND_WEB_URL;
 
-    const { line_items, customer_email } = req.body;
+    const {
+      line_items,
+      customer_email,
+      // taxiSelected,
+      // name,
+      // surname,
+      // email,
+      // phoneNumber,
+      // arrivalAirlineName,
+      // arrivalFlightNumber,
+      // arrivalDepartureAirport,
+      // departureAirlineName,
+      // departureFlightNumber,
+      // departureDepartureAirport,
+      // pickUpLocation,
+      // dropLocation,
+      // arrivalDate,
+      // departureDate,
+      // journey,
+      // passengers,
+      // taxiOption,
+      // price,
+    } = req.body;
+
     // client_reference_id
     // Check req body has line items and email
-
+    console.log(req.body);
     if (!line_items || !customer_email) {
       res.status(400).send("missing required session ");
     }
@@ -72,21 +95,49 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
         "sepa_debit",
       ],
       mode: "payment",
-      line_items,
+      // success?session_id={CHECKOUT_SESSION_ID}
       customer_email,
-      success_url: `${domainUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${domainUrl}`,
       cancel_url: `${domainUrl}/canceled`,
+      line_items,
       // client_reference_id,
 
       // line_items: [
       //   {
-      //     name: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
-      //     description: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
-      //     amount: prices.oneWayPriceTex1,
       //     quantity: 1,
-      //     currency: "eur",
+      //     price_data: {
+      //       currency: "eur",
+      //       unit_amount: price * 100,
+      //       product_data: {
+      //         name: `Private Airport Transfers`,
+      //         description: `Transfer from ${pickUpLocation} To ${dropLocation}`,
+      //       },
+      //     },
+
+      //     // name: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
+      //     // description: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
+      //     // amount: prices.oneWayPriceTex1,
+      //     // quantity: 1,
+      //     // currency: "eur",
       //   },
       // ],
+
+      // name,
+      // surname,
+      // email,
+      // phoneNumber,
+      // arrivalAirlineName,
+      // arrivalFlightNumber,
+      // arrivalDepartureAirport,
+      // departureAirlineName,
+      // departureFlightNumber,
+      // departureDepartureAirport,
+      // arrivalDate,
+      // departureDate,
+      // journey,
+      // passengers,
+      // taxiOption,
+      // price,
     });
 
     res.status(200).send({ sessionId: session.id });

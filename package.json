@@ -9,6 +9,9 @@
     "dev": "nodemon -e js -r dotenv/config ./src/server.js",
     "start": "node ./src/server.js"
   },
+  "engines": {
+    "node": "v14.17.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
