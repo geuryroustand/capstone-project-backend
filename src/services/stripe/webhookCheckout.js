@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const webHooCheckoutRouter = express.Router();
 
 webHooCheckoutRouter.post("/", async (req, res, next) => {
-  const signature = req.headers["strip-signature"];
+  const signature = req.headers["stripe-signature"];
   let event;
   try {
     event = stripe.webhooks.constructEvent(
