@@ -62,7 +62,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
     const {
       line_items,
       customer_email,
-      // taxiSelected,
+      taxiSelected,
       // name,
       // surname,
       // email,
@@ -104,6 +104,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
       success_url: `${domainUrl}`,
       cancel_url: `${domainUrl}/canceled`,
       line_items,
+      taxiSelected,
       // client_reference_id,
 
       // line_items: [
