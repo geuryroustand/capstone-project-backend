@@ -83,7 +83,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
       // price,
     } = req.body;
 
-    console.log(re.body);
+    console.log("=================================", req.body);
     // client_reference_id
     // Check req body has line items and email
 
