@@ -19,7 +19,6 @@ const port = process.env.PORT;
 
 const whiteList = [process.env.FE_DEV_URL, process.env.FE_PROD_URL];
 
-console.log(process.env.NODE_ENV === "production" ? "Yes" : "Node");
 const corsOpts = {
   origin: function (origin, next) {
     if (!origin || whiteList.indexOf(origin) !== -1) {
