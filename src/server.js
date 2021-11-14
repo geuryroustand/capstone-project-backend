@@ -13,6 +13,7 @@ import locationsRouter from "./services/locations/index.js";
 import addPrivatePriceRouter from "./services/airportPrivatePrices/index.js";
 import bookingRouter from "./services/booking/index.js";
 import userRouter from "./services/user/index.js";
+import webHooCheckoutRouter from "./services/stripe/webhookCheckout.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -28,6 +29,13 @@ const corsOpts = {
     }
   },
 };
+
+//************************STRIPE WEBHOOK ROUTER**************************
+server.use(
+  "/webhook-checkout",
+  express.raw({ type: "application/json" }),
+  webHooCheckoutRouter
+);
 
 //************************MIDDLEWARE***********************
 
