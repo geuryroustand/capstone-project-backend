@@ -53,7 +53,10 @@ bookingRouter.post("/", async (req, res, next) => {
 
 bookingRouter.post("/create-checkout-session", async (req, res, next) => {
   try {
-    const domainUrl = process.env.FRONTEND_WEB_URL;
+    const domainUrl =
+      process.env.NODE_ENV === "production"
+        ? process.env.FE_PROD_URL
+        : process.env.FE_DEV_URL;
 
     const {
       line_items,
