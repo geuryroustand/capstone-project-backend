@@ -18,7 +18,11 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    console.log("webhook", event.data.object);
+    const session = event.data.object;
+
+    console.log("aasas", session.line_items, session.customer_email);
+
+    console.log("webhook");
     res.status(200).send({ received: true });
   }
 });
