@@ -18,11 +18,15 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    const session = event.data.object;
+    const { line_items, customer_email, taxiSelected } = event.data.object;
 
-    console.log("aasas", session.line_items, session.customer_email);
+    console.log(
+      "aasas",
+      session.line_items,
+      session.customer_email,
+      taxiSelected
+    );
 
-    console.log("webhook");
     res.status(200).send({ received: true });
   }
 });
