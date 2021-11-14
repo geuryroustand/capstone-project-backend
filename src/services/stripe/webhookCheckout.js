@@ -18,9 +18,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    const { name, customer_email, taxiSelected } = event.data.object;
+    const { name, customer_email } = event.data.object;
 
-    console.log("=========dddd===========", name, customer_email, taxiSelected);
+    console.log("=========dddd===========", name, customer_email);
 
     res.status(200).send({ received: true });
   }
