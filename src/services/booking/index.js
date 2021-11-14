@@ -54,7 +54,7 @@ bookingRouter.post("/", async (req, res, next) => {
 bookingRouter.post("/create-checkout-session", async (req, res, next) => {
   try {
     const domainUrl = process.env.FE_PROD_URL;
-    console.log(domainUrl);
+
     // process.env.NODE_ENV === "production"
     //   ? process.env.FE_PROD_URL
     // : process.env.FE_DEV_URL;
@@ -85,7 +85,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
 
     // client_reference_id
     // Check req body has line items and email
-    console.log(req.body);
+
     if (!line_items || !customer_email) {
       res.status(400).send("missing required session ");
     }
