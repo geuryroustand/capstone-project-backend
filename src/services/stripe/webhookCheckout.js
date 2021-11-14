@@ -18,7 +18,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    const { line_items, customer_email, taxiSelected } = event.data.object;
+    const { line_items, customer_email, taxiSelected } = await event.data
+      .object;
 
     console.log("aasas", line_items, customer_email, taxiSelected);
 
