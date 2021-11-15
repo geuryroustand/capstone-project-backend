@@ -107,7 +107,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
       cancel_url: `${domainUrl}/canceled`,
 
       line_items,
-      taxiSelected,
+      // taxiSelected,
       // client_reference_id,
 
       // line_items: [
