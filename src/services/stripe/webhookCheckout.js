@@ -20,11 +20,11 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   if (event.type === "checkout.session.completed") {
     const { name, customer_email } = event.data.object;
 
-    console.log("======Object", event.data.object);
+    // console.log("======Object", event.data.object);
     // console.log("=================ddd", event.data.object);
     console.log(
       "=========dddd===========",
-      event.data.object.line_items
+      ...event.data.object.line_items
       // event.data.object.customer_email
     );
 
