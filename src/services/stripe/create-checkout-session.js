@@ -12,8 +12,8 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
     //   ? process.env.FE_PROD_URL
     // : process.env.FE_DEV_URL;
 
-    const { line_items, customer_email } = req.body;
-    // taxiSelected
+    const { line_items, customer_email, taxiSelected } = req.body;
+
     if (!line_items || !customer_email) {
       res.status(400).send("missing required session ");
     }
@@ -33,22 +33,22 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
       cancel_url: `${domainUrl}/canceled`,
 
       line_items,
-      // metadata: {
-      //   name: `${taxiSelected.name}`,
-      //   surname: `${taxiSelected.surname}`,
-      //   phoneNumber: `${taxiSelected.phoneNumber}`,
-      //   arrivalAirlineName: `${taxiSelected.arrivalAirlineName}`,
-      //   arrivalFlightNumber: `${taxiSelected.arrivalFlightNumber}`,
-      //   arrivalDepartureAirport: `${taxiSelected.arrivalDepartureAirport}`,
-      //   departureAirlineName: `${taxiSelected.departureAirlineName}`,
-      //   departureFlightNumber: `${taxiSelected.departureFlightNumber}`,
-      //   departureDepartureAirport: `${taxiSelected.departureDepartureAirport}`,
-      //   arrivalDate: `${taxiSelected.arrivalDate}`,
-      //   departureDate: `${taxiSelected.departureDate}`,
-      //   journey: `${taxiSelected.journey}`,
-      //   passengers: `${taxiSelected.passengers}`,
-      //   taxiOption: `${taxiSelected.taxiOption}`,
-      // },
+      metadata: {
+        name: `${taxiSelected.name}`,
+        surname: `${taxiSelected.surname}`,
+        phoneNumber: `${taxiSelected.phoneNumber}`,
+        arrivalAirlineName: `${taxiSelected.arrivalAirlineName}`,
+        arrivalFlightNumber: `${taxiSelected.arrivalFlightNumber}`,
+        arrivalDepartureAirport: `${taxiSelected.arrivalDepartureAirport}`,
+        departureAirlineName: `${taxiSelected.departureAirlineName}`,
+        departureFlightNumber: `${taxiSelected.departureFlightNumber}`,
+        departureDepartureAirport: `${taxiSelected.departureDepartureAirport}`,
+        arrivalDate: `${taxiSelected.arrivalDate}`,
+        departureDate: `${taxiSelected.departureDate}`,
+        journey: `${taxiSelected.journey}`,
+        passengers: `${taxiSelected.passengers}`,
+        taxiOption: `${taxiSelected.taxiOption}`,
+      },
     });
 
     res.status(200).send({ sessionId: session.id });
@@ -56,7 +56,7 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
     console.log(error);
     res
       .status(400)
-      .send({ error: "An error occured, unable to create session" });
+      .send({ error: "An error occurred, unable to create session" });
   }
 });
 
