@@ -57,6 +57,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         });
 
         res.status(200).send({ received: true, createOneWayBooking });
+
+        return;
       }
 
       const createBooking = await bookingSchema.create({
@@ -75,7 +77,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         passengers,
         taxiOption,
 
-        totalPrice: amount_total / 100,
+        totalPrice: 10.5,
         email: customer_email,
         passengersName: name,
         passengersSurname: surname,
