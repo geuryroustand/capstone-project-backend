@@ -4,29 +4,57 @@ const { model, Schema } = mongoose;
 
 const bookingSchema = new Schema(
   {
+    passengersName: {
+      type: String,
+    },
+    passengersSurname: {
+      type: String,
+    },
+    email: {
+      type: String,
+    },
+
+    phoneNumber: {
+      type: Number,
+    },
+    arrivalAirlineName: {
+      type: String,
+    },
+    arrivalFlightNumber: {
+      type: String,
+    },
+    arrivalDepartureAirport: {
+      type: String,
+    },
     arrivalDate: {
+      type: String,
+    },
+
+    departureAirlineName: {
+      type: String,
+    },
+
+    departureFlightNumber: {
+      type: String,
+    },
+
+    departureDepartureAirport: {
       type: String,
     },
     departureDate: {
       type: String,
     },
 
-    arrivalAirlineName: {
+    journey: {
       type: String,
     },
-    departureAirlineName: {
-      type: String,
-    },
-    arrivalFlightNo: {
-      type: String,
-    },
-    departureFlightNo: {
-      type: String,
-    },
-
     passengers: {
       type: Number,
     },
+    taxiOption: {
+      type: Number,
+    },
+
     specialRequest: {
       type: String,
     },
