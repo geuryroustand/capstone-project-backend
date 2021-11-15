@@ -22,11 +22,11 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
     console.log("======Object", event.data.object);
     // console.log("=================ddd", event.data.object);
-    // console.log(
-    //   "=========dddd===========",
-    //   event.data.object.line_items,
-    //   event.data.object.customer_email
-    // );
+    console.log(
+      "=========dddd===========",
+      event.data.object.line_items
+      // event.data.object.customer_email
+    );
 
     res.status(200).send({ received: true });
   }
