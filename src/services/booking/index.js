@@ -62,6 +62,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
     const {
       line_items,
       customer_email,
+      taxiSelected,
 
       // name,
       // surname,
@@ -108,7 +109,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
 
       line_items,
       metadata: {
-        name: "Geury",
+        taxiSelected,
       },
       // taxiSelected,
       // client_reference_id,
