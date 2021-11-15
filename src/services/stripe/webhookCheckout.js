@@ -35,12 +35,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         taxiOption,
       } = event.data.object.metadata;
 
-      if (
-        arrivalAirlineName.length > 0 &&
-        arrivalFlightNumber.length > 0 &&
-        arrivalDepartureAirport.length > 0 &&
-        arrivalDate.length > 0
-      ) {
+      if (journey === "OneWay") {
         const createOneWayBooking = await bookingSchema.create({
           phoneNumber,
           arrivalAirlineName,
