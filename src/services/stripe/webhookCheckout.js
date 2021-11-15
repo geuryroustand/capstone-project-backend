@@ -35,6 +35,30 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         taxiOption,
       } = event.data.object.metadata;
 
+      if (
+        arrivalAirlineName.length > 0 &&
+        arrivalFlightNumber.length > 0 &&
+        arrivalDepartureAirport.length > 0 &&
+        arrivalDate.length > 0
+      ) {
+        const createOneWayBooking = await bookingSchema.create({
+          phoneNumber,
+          arrivalAirlineName,
+          arrivalFlightNumber,
+          arrivalDepartureAirport,
+          arrivalDate,
+          journey,
+          passengers,
+          taxiOption,
+          totalPrice: amount_total / 100,
+          email: customer_email,
+          passengersName: name,
+          passengersSurname: surname,
+        });
+
+        res.status(200).send({ received: true, createOneWayBooking });
+      }
+
       const createBooking = await bookingSchema.create({
         phoneNumber,
         arrivalAirlineName,
