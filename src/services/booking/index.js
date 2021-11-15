@@ -62,7 +62,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
     const {
       line_items,
       customer_email,
-      taxiSelected,
+
       // name,
       // surname,
       // email,
@@ -83,7 +83,7 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
       // price,
     } = req.body;
 
-    // console.log("=================================", ...line_items);
+    console.log("=================================", ...req.body);
     // console.log("=================================", taxiSelected);
     // client_reference_id
     // Check req body has line items and email
