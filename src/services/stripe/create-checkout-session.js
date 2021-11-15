@@ -34,22 +34,22 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
       cancel_url: `${domainUrl}/canceled`,
 
       line_items,
-      // metadata: {
-      //   name: `${taxiSelected.name}`,
-      //   surname: `${taxiSelected.surname}`,
-      //   phoneNumber: `${taxiSelected.phoneNumber}`,
-      //   arrivalAirlineName: `${taxiSelected.arrivalAirlineName}`,
-      //   arrivalFlightNumber: `${taxiSelected.arrivalFlightNumber}`,
-      //   arrivalDepartureAirport: `${taxiSelected.arrivalDepartureAirport}`,
-      //   departureAirlineName: `${taxiSelected.departureAirlineName}`,
-      //   departureFlightNumber: `${taxiSelected.departureFlightNumber}`,
-      //   departureDepartureAirport: `${taxiSelected.departureDepartureAirport}`,
-      //   arrivalDate: `${taxiSelected.arrivalDate}`,
-      //   departureDate: `${taxiSelected.departureDate}`,
-      //   journey: `${taxiSelected.journey}`,
-      //   passengers: `${taxiSelected.passengers}`,
-      //   taxiOption: `${taxiSelected.taxiOption}`,
-      // },
+      metadata: {
+        name: `${taxiSelected.name}`,
+        surname: `${taxiSelected.surname}`,
+        phoneNumber: `${taxiSelected.phoneNumber}`,
+        arrivalAirlineName: `${taxiSelected.arrivalAirlineName}`,
+        arrivalFlightNumber: `${taxiSelected.arrivalFlightNumber}`,
+        arrivalDepartureAirport: `${taxiSelected.arrivalDepartureAirport}`,
+        departureAirlineName: `${taxiSelected.departureAirlineName}`,
+        departureFlightNumber: `${taxiSelected.departureFlightNumber}`,
+        departureDepartureAirport: `${taxiSelected.departureDepartureAirport}`,
+        arrivalDate: `${taxiSelected.arrivalDate}`,
+        departureDate: `${taxiSelected.departureDate}`,
+        journey: `${taxiSelected.journey}`,
+        passengers: `${taxiSelected.passengers}`,
+        taxiOption: `${taxiSelected.taxiOption}`,
+      },
     });
 
     res.status(200).send({ sessionId: session.id });
