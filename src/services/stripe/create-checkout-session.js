@@ -18,6 +18,7 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
       res.status(400).send("missing required session ");
     }
 
+    console.log("===============", req.body);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: [
         "card",
