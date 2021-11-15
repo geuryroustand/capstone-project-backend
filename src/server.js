@@ -14,6 +14,7 @@ import addPrivatePriceRouter from "./services/airportPrivatePrices/index.js";
 import bookingRouter from "./services/booking/index.js";
 import userRouter from "./services/user/index.js";
 import webHooCheckoutRouter from "./services/stripe/webhookCheckout.js";
+import createCheckoutSessionRouter from "./services/stripe/create-checkout-session.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -46,6 +47,7 @@ server.use(express.json());
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
 server.use("/bookings", bookingRouter);
 server.use("/users", userRouter);
+server.use("/create-checkout-session", createCheckoutSessionRouter);
 
 //************************ERROR MIDDLEWARE***********************
 
