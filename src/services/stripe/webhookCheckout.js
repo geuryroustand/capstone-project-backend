@@ -18,9 +18,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    const { name, customer_email } = event.data.object;
+    const { name, customer_email, amount_total } = event.data.object;
 
-    // console.log("======Object", event.data.object);
+    console.log("======amount", amount_total / 100);
     // console.log("=================ddd", event.data.object);
     console.log(
       "=========dddd===========",
