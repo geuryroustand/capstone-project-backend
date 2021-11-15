@@ -59,29 +59,29 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
     //   ? process.env.FE_PROD_URL
     // : process.env.FE_DEV_URL;
 
-    // const {
-    //   line_items,
-    //   customer_email,
-    //   // taxiSelected,
-    //   // name,
-    //   // surname,
-    //   // email,
-    //   // phoneNumber,
-    //   // arrivalAirlineName,
-    //   // arrivalFlightNumber,
-    //   // arrivalDepartureAirport,
-    //   // departureAirlineName,
-    //   // departureFlightNumber,
-    //   // departureDepartureAirport,
-    //   // pickUpLocation,
-    //   // dropLocation,
-    //   // arrivalDate,
-    //   // departureDate,
-    //   // journey,
-    //   // passengers,
-    //   // taxiOption,
-    //   // price,
-    // } = req.body;
+    const {
+      line_items,
+      customer_email,
+      // taxiSelected,
+      // name,
+      // surname,
+      // email,
+      // phoneNumber,
+      // arrivalAirlineName,
+      // arrivalFlightNumber,
+      // arrivalDepartureAirport,
+      // departureAirlineName,
+      // departureFlightNumber,
+      // departureDepartureAirport,
+      // pickUpLocation,
+      // dropLocation,
+      // arrivalDate,
+      // departureDate,
+      // journey,
+      // passengers,
+      // taxiOption,
+      // price,
+    } = req.body;
 
     // console.log("=================================", ...line_items);
     // console.log("=================================", taxiSelected);
@@ -102,11 +102,11 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
       ],
       mode: "payment",
       // success?session_id={CHECKOUT_SESSION_ID}
-      customer_email: res.body.customer_email,
+      customer_email,
       success_url: `${domainUrl}`,
       cancel_url: `${domainUrl}/canceled`,
 
-      line_items: req.body.line_items,
+      line_items,
       // taxiSelected,
       // client_reference_id,
 
