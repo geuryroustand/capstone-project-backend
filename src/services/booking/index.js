@@ -106,28 +106,29 @@ bookingRouter.post("/create-checkout-session", async (req, res, next) => {
       success_url: `${domainUrl}`,
       cancel_url: `${domainUrl}/canceled`,
 
+      line_items: req.body.line_items,
       // taxiSelected,
       // client_reference_id,
 
-      line_items: [
-        {
-          quantity: 1,
-          price_data: {
-            currency: "eur",
-            unit_amount: res.body.line_items.unit_amount,
-            product_data: {
-              name: `Private Airport Transfers`,
-              description: `Transfer from ${pickUpLocation} To ${dropLocation}`,
-            },
-          },
+      // line_items: [
+      //   {
+      //     quantity: 1,
+      //     price_data: {
+      //       currency: "eur",
+      //       unit_amount: res.body.line_items.unit_amount,
+      //       product_data: {
+      //         name: `Private Airport Transfers`,
+      //         description: `Transfer from ${pickUpLocation} To ${dropLocation}`,
+      //       },
+      //     },
 
-          // name: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
-          // description: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
-          // amount: prices.oneWayPriceTex1,
-          // quantity: 1,
-          // currency: "eur",
-        },
-      ],
+      //     // name: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
+      //     // description: `From: ${prices.pickupPlace.location} to ${prices.dropPlace.location} `,
+      //     // amount: prices.oneWayPriceTex1,
+      //     // quantity: 1,
+      //     // currency: "eur",
+      //   },
+      // ],
 
       // name,
       // surname,
