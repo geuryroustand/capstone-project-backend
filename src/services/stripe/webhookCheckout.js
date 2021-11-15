@@ -69,7 +69,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       // event.data.object.customer_email
     );
 
-    res.status(200).send({ received: true });
+    res.status(200).send({ received: true, createBooking });
   }
 });
 

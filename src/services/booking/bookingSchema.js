@@ -52,7 +52,7 @@ const bookingSchema = new Schema(
       type: Number,
     },
     taxiOption: {
-      type: Number,
+      type: String,
     },
 
     specialRequest: {
