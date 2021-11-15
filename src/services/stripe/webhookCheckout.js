@@ -24,7 +24,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
     // console.log("=================ddd", event.data.object);
     console.log(
       "=========dddd===========",
-      event.data.object.line_items
+      event.data.object
       // event.data.object.customer_email
     );
 
