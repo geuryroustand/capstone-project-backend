@@ -14,7 +14,7 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
 
     const { line_items, customer_email, taxiSelected } = req.body;
 
-    if (!line_items || !customer_email) {
+    if (!line_items || !customer_email || taxiSelected) {
       res.status(400).send("missing required session ");
     }
 
