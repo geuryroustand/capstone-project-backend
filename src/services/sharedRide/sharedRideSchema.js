@@ -2,12 +2,21 @@ import mongoose from "mongoose";
 
 const { model, Schema } = mongoose;
 
-const bookingSchema = new Schema(
+const sharedRideSchema = new Schema(
   {
-    user: {
+    passengersName: {
+      type: String,
+    },
+    passengersSurname: {
+      type: String,
+    },
+    email: {
       type: String,
     },
 
+    phoneNumber: {
+      type: Number,
+    },
     arrivalAirlineName: {
       type: String,
     },
@@ -56,4 +65,4 @@ const bookingSchema = new Schema(
   { timestamps: true }
 );
 
-export default model("booking", bookingSchema);
+export default model("sharedRide", sharedRideSchema);
