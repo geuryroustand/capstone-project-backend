@@ -52,33 +52,31 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         });
 
         res.status(200).send({ received: true, createOneWayBooking });
+      } else {
+        const createBooking = await bookingSchema.create({
+          phoneNumber,
+          arrivalAirlineName,
+          arrivalFlightNumber,
+          arrivalDepartureAirport,
+          arrivalDate,
 
-        return;
+          departureAirlineName,
+          departureFlightNumber,
+          departureDepartureAirport,
+          departureDate,
+
+          journey,
+          passengers,
+          taxiOption,
+
+          totalPrice: 10.5,
+          email: customer_email,
+          passengersName: name,
+          passengersSurname: surname,
+        });
+
+        res.status(200).send({ received: true, createBooking });
       }
-
-      const createBooking = await bookingSchema.create({
-        phoneNumber,
-        arrivalAirlineName,
-        arrivalFlightNumber,
-        arrivalDepartureAirport,
-        arrivalDate,
-
-        departureAirlineName,
-        departureFlightNumber,
-        departureDepartureAirport,
-        departureDate,
-
-        journey,
-        passengers,
-        taxiOption,
-
-        totalPrice: 10.5,
-        email: customer_email,
-        passengersName: name,
-        passengersSurname: surname,
-      });
-
-      res.status(200).send({ received: true, createBooking });
     }
   } catch (error) {
     return res.status(400).send(`Webhook error: ${error}`);
