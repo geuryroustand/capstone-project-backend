@@ -1,7 +1,7 @@
 import express from "express";
 
 import bookingSchema from "./bookingSchema.js";
-import userModel from "../user/schema.js";
+// import userModel from "../user/schema.js";
 import privateTransfersSchema from "../airportPrivatePrices/privateTransfersSchema.js";
 const bookingRouter = express.Router();
 
@@ -36,13 +36,13 @@ bookingRouter.post("/", async (req, res, next) => {
 
     const { _id } = createNewBooking;
 
-    const createNewUser = await userModel.create({
-      name: req.body.name,
-      surname: req.body.surname,
-      email: req.body.email,
-      mobileNumber: req.body.mobileNumber,
-      reservationsHistory: _id,
-    });
+    // const createNewUser = await userModel.create({
+    //   name: req.body.name,
+    //   surname: req.body.surname,
+    //   email: req.body.email,
+    //   mobileNumber: req.body.mobileNumber,
+    //   reservationsHistory: _id,
+    // });
 
     res.send(_id);
   } catch (error) {

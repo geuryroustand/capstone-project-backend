@@ -15,7 +15,7 @@ const sharedRideSchema = new Schema(
     },
 
     phoneNumber: {
-      type: Number,
+      type: String,
     },
     arrivalAirlineName: {
       type: String,
@@ -23,7 +23,7 @@ const sharedRideSchema = new Schema(
     arrivalFlightNumber: {
       type: String,
     },
-    arrivalDepartureAirport: {
+    pickupLocationName: {
       type: String,
     },
     arrivalDate: {
@@ -38,7 +38,7 @@ const sharedRideSchema = new Schema(
       type: String,
     },
 
-    departureDepartureAirport: {
+    dropLocationName: {
       type: String,
     },
     departureDate: {
