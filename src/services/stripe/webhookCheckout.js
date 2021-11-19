@@ -51,7 +51,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           passengersSurname: surname,
         });
 
-        res.status(200).send({ received: true, createOneWayBooking });
+        res.status(201).send();
       } else {
         const createBooking = await bookingSchema.create({
           phoneNumber,
@@ -75,7 +75,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           passengersSurname: surname,
         });
 
-        res.status(200).send({ received: true, createBooking });
+        res.status(201).send();
       }
     }
   } catch (error) {
