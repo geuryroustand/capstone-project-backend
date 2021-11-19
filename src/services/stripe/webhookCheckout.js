@@ -20,6 +20,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
   if (event.type === "checkout.session.completed") {
     const { customer_email, amount_total } = event.data.object;
+
+    console.log(event.data.object);
     const {
       name,
       surname,
