@@ -12,7 +12,7 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
     //   ? process.env.FE_PROD_URL
     // : process.env.FE_DEV_URL;
 
-    const { line_items, customer_email, taxiSelected } = req.body;
+    const { line_items, customer_email } = req.body;
     // || taxiSelected
     if (!line_items || !customer_email) {
       res.status(400).send("missing required session ");
