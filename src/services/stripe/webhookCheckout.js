@@ -14,70 +14,73 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       signature,
       process.env.STRIPE_WEBHOOKS_SECRET
     );
-    if (event.type === "checkout.session.completed") {
-      const { customer_email, amount_total } = event.data.object;
-      const {
-        name,
-        surname,
-        phoneNumber,
-        arrivalAirlineName,
-        arrivalFlightNumber,
-        arrivalDepartureAirport,
-        arrivalDate,
 
-        departureAirlineName,
-        departureFlightNumber,
-        departureDepartureAirport,
-        departureDate,
+    // if (event.type === "checkout.session.completed") {
+    //   const { customer_email, amount_total } = event.data.object;
+    //   const {
+    //     name,
+    //     surname,
+    //     phoneNumber,
+    //     arrivalAirlineName,
+    //     arrivalFlightNumber,
+    //     arrivalDepartureAirport,
+    //     arrivalDate,
 
-        journey,
-        passengers,
-        taxiOption,
-      } = event.data.object.metadata;
+    //     departureAirlineName,
+    //     departureFlightNumber,
+    //     departureDepartureAirport,
+    //     departureDate,
 
-      if (journey === "OneWay") {
-        const createOneWayBooking = await bookingSchema.create({
-          phoneNumber,
-          arrivalAirlineName,
-          arrivalFlightNumber,
-          arrivalDepartureAirport,
-          arrivalDate,
-          journey,
-          passengers,
-          taxiOption,
-          totalPrice: amount_total / 100,
-          email: customer_email,
-          passengersName: name,
-          passengersSurname: surname,
-        });
+    //     journey,
+    //     passengers,
+    //     taxiOption,
+    //   } = event.data.object.metadata;
 
-        res.status(201).send();
-      } else {
-        const createBooking = await bookingSchema.create({
-          phoneNumber,
-          arrivalAirlineName,
-          arrivalFlightNumber,
-          arrivalDepartureAirport,
-          arrivalDate,
+    //   if (journey === "OneWay") {
+    //     const createOneWayBooking = await bookingSchema.create({
+    //       phoneNumber,
+    //       arrivalAirlineName,
+    //       arrivalFlightNumber,
+    //       arrivalDepartureAirport,
+    //       arrivalDate,
+    //       journey,
+    //       passengers,
+    //       taxiOption,
+    //       totalPrice: amount_total / 100,
+    //       email: customer_email,
+    //       passengersName: name,
+    //       passengersSurname: surname,
+    //     });
 
-          departureAirlineName,
-          departureFlightNumber,
-          departureDepartureAirport,
-          departureDate,
+    //     res.status(201).send();
+    //   } else {
+    //     const createBooking = await bookingSchema.create({
+    //       phoneNumber,
+    //       arrivalAirlineName,
+    //       arrivalFlightNumber,
+    //       arrivalDepartureAirport,
+    //       arrivalDate,
 
-          journey,
-          passengers,
-          taxiOption,
+    //       departureAirlineName,
+    //       departureFlightNumber,
+    //       departureDepartureAirport,
+    //       departureDate,
 
-          totalPrice: 10.5,
-          email: customer_email,
-          passengersName: name,
-          passengersSurname: surname,
-        });
+    //       journey,
+    //       passengers,
+    //       taxiOption,
 
-        res.status(201).send();
-      }
-    }
+    //       totalPrice: 10.5,
+    //       email: customer_email,
+    //       passengersName: name,
+    //       passengersSurname: surname,
+    //     });
+
+    //     res.status(201).send();
+    //   }
+    // }
+
+    res.status(200).send();
   } catch (error) {
     return res.status(400).send(`Webhook error: ${error}`);
   }
