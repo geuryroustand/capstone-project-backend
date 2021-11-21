@@ -58,8 +58,11 @@ server.use(forbiddenErrHandler);
 server.use(badReqErrHandler);
 server.use(serverErrHandler);
 
-console.log(process.env.MONGO_CONNECTION);
-mongoose.connect(process.env.MONGO_CONNECTION);
+mongoose.connect(process.env.MONGO_CONNECTION, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
 
 mongoose.connection.on("connected", () => {
   console.log("😊Successfully connected to mongo!🥰 😎");
