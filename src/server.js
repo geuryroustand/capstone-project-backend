@@ -58,21 +58,32 @@ server.use(forbiddenErrHandler);
 server.use(badReqErrHandler);
 server.use(serverErrHandler);
 
-mongoose.connect(process.env.MONGO_CONNECTION, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 // useNewUrlParser: true,
 // useCreateIndex: true,
 // useUnifiedTopology: true,
-mongoose.connection.on("connected", () => {
-  console.log("😊Successfully connected to mongo!🥰 😎");
-  server.listen(port, () => {
+
+server.listen(port, async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_CONNECTION, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
     console.table(listEndpoints(server));
     console.log("server listing on port " + port);
-  });
+  } catch (error) {
+    console.log("Db connection is failed ", error);
+  }
 });
 
-mongoose.connection.on("error", (err) => {
+server.on("error", (err) => {
   console.error("Mongo error : 🧨⛔🎇😬 :", err);
 });
+
+// mongoose.connection.on("connected", () => {
+//   console.log("😊Successfully connected to mongo!🥰 😎");
+// });
+
+// mongoose.connection.on("error", (err) => {
+//   console.error("Mongo error : 🧨⛔🎇😬 :", err);
+// });
