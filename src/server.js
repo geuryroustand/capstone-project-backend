@@ -15,6 +15,7 @@ import bookingRouter from "./services/booking/index.js";
 import webHooCheckoutRouter from "./services/stripe/webhookCheckout.js";
 import createCheckoutSessionRouter from "./services/stripe/create-checkout-session.js";
 import sharedRideRouter from "./services/sharedRide/index.js";
+import usersRouter from "./services/user/index.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -49,7 +50,7 @@ server.use("/bookings", bookingRouter);
 // server.use("/users", userRouter);
 server.use("/shared-ride", sharedRideRouter);
 server.use("/create-checkout-session", createCheckoutSessionRouter);
-
+server.use("/users", usersRouter);
 //************************ERROR MIDDLEWARE***********************
 
 server.use(notFoundErrHandler);
