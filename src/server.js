@@ -66,11 +66,12 @@ server.listen(port, async () => {
   try {
     await mongoose.connect(process.env.MONGO_CONNECTION, {
       useNewUrlParser: true,
+
       useUnifiedTopology: true,
     });
 
     console.table(listEndpoints(server));
-    console.log("server listing on port " + port);
+    console.log("😊Successfully connected to mongo!🥰 😎" + port);
   } catch (error) {
     console.log("Db connection is failed ", error);
   }
