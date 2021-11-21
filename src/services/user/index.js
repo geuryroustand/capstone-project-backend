@@ -1,5 +1,6 @@
 import express from "express";
 import createHttpError from "http-errors";
+import { JWTAuthMiddleware } from "../auth/middlewares.js";
 import { JWTAuthenticate } from "../auth/tools.js";
 import userSchema from "./userSchema.js";
 
@@ -16,6 +17,31 @@ usersRouter.post("/register", async (req, res, next) => {
     } else {
       next(createHttpError(401), "User already exists");
     }
+  } catch (error) {
+    next(error);
+  }
+});
+
+usersRouter.post("/login", async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await userSchema.checkCredentials(email, password);
+
+    if (user) {
+      const { accessToken, refreshToken } = await JWTAuthenticate(user);
+      res.send({ accessToken, refreshToken });
+    } else {
+      next(createHttpError(401), "User already exists");
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+usersRouter.get("/me", JWTAuthMiddleware, async (req, res, next) => {
+  try {
+    res.send(req.user);
   } catch (error) {
     next(error);
   }
