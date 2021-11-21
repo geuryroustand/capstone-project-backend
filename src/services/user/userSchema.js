@@ -26,11 +26,10 @@ const userSchema = new Schema(
     refreshToken: {
       type: String,
     },
-    writeConcern: { w: "majority", j: true, wtimeout: 1000 },
+  },
+  {
+    timestamps: true,
   }
-  // {
-  //   timestamps: true,
-  // },
 );
 
 userSchema.pre("save", async function (next) {
