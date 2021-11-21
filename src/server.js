@@ -58,7 +58,10 @@ server.use(forbiddenErrHandler);
 server.use(badReqErrHandler);
 server.use(serverErrHandler);
 
-mongoose.connect(process.env.MONGO_CONNECTION);
+mongoose.connect(process.env.MONGO_CONNECTION, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 // useNewUrlParser: true,
 // useCreateIndex: true,
 // useUnifiedTopology: true,
