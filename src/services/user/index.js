@@ -8,19 +8,15 @@ const usersRouter = express.Router();
 
 usersRouter.post("/register", async (req, res, next) => {
   try {
-    const newUser = await userSchema.create(req.body);
-    res.send(newUser);
-
-    // const user = await userSchema.findOne({ email: req.body.email });
-    // if (!user) {
-    //   const newUser = await userSchema.create(req.body);
-    //   res.send(newUser);
-    //   // const { accessToken, refreshToken } = await JWTAuthenticate(newUser);
-    //   // const { _id } = newUser;
-    //   // res.send({ accessToken, refreshToken, _id });
-    // } else {
-    //   next(createHttpError(401), "User already exists");
-    // }
+    const user = await userSchema.findOne({ email: req.body.email });
+    if (!user) {
+      const newUser = await userSchema.create(req.body);
+      const { accessToken, refreshToken } = await JWTAuthenticate(newUser);
+      const { _id } = newUser;
+      res.send({ accessToken, refreshToken, _id });
+    } else {
+      next(createHttpError(401), "User already exists");
+    }
   } catch (error) {
     next(error);
   }

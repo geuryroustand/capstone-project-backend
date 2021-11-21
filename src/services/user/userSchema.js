@@ -33,16 +33,9 @@ const userSchema = new Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  const newUser = this;
-  const plainPW = newUser.password;
-
-  if (newUser.isModified("password")) {
-    newUser.password = await bcrypt.hash(plainPW, 10);
+  if (this.isModified("password")) {
+    this.password = await bcrypt.hash(this.password, 12);
   }
-
-  // if (this.isModified("password")) {
-  //   this.password = await bcrypt.hash(this.password, 12);
-  // }
   next();
 });
 
