@@ -73,7 +73,7 @@ server.listen(port, async () => {
     console.table(listEndpoints(server));
     console.log("😊Successfully connected to mongo!🥰 😎" + port);
   } catch (error) {
-    console.log("Db connection is failed ", error);
+    console.error("Db connection is failed ", error);
   }
 });
 
