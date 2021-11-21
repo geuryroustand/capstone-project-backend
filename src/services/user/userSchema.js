@@ -5,11 +5,6 @@ const { model, Schema } = mongoose;
 
 const userSchema = new Schema(
   {
-    writeConcern: {
-      w: "majority",
-      j: true,
-      wtimeout: 1000,
-    },
     name: {
       type: String,
       required: [true, "User name is required"],
