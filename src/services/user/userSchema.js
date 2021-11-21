@@ -22,13 +22,15 @@ const userSchema = new Schema(
       type: String,
       required: [true, " Password is required"],
     },
+
     refreshToken: {
       type: String,
     },
-  },
-  {
-    timestamps: true,
+    writeConcern: { w: "majority", j: true, wtimeout: 1000 },
   }
+  // {
+  //   timestamps: true,
+  // },
 );
 
 userSchema.pre("save", async function (next) {
