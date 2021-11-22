@@ -12,8 +12,8 @@ usersRouter.post("/register", async (req, res, next) => {
     if (!user) {
       const newUser = await userSchema.create(req.body);
       const { accessToken, refreshToken } = await JWTAuthenticate(newUser);
-      const { _id } = newUser;
-      res.send({ accessToken, refreshToken, _id });
+      const { name, surname, _id } = newUser;
+      res.send({ accessToken, refreshToken, _id, name, surname });
     } else {
       next(createHttpError(401), "User already exists");
     }
@@ -29,8 +29,9 @@ usersRouter.post("/login", async (req, res, next) => {
     const user = await userSchema.checkCredentials(email, password);
 
     if (user) {
+      const { name, surname } = user;
       const { accessToken, refreshToken } = await JWTAuthenticate(user);
-      res.send({ accessToken, refreshToken });
+      res.send({ accessToken, refreshToken, name, surname });
     } else {
       next(createHttpError(401), "User already exists");
     }
@@ -41,6 +42,7 @@ usersRouter.post("/login", async (req, res, next) => {
 
 usersRouter.get("/me", JWTAuthMiddleware, async (req, res, next) => {
   try {
+    await JWTAuthenticate(req.user);
     res.send(req.user);
   } catch (error) {
     next(error);
