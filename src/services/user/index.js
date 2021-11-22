@@ -42,8 +42,10 @@ usersRouter.post("/login", async (req, res, next) => {
 
 usersRouter.get("/me", JWTAuthMiddleware, async (req, res, next) => {
   try {
-    await JWTAuthenticate(req.user);
-    res.send(req.user);
+    const { accessToken, refreshToken } = await JWTAuthenticate(req.user);
+    const { name, surname, _id, email } = req.user;
+
+    res.send({ name, surname, _id, email, accessToken });
   } catch (error) {
     next(error);
   }
