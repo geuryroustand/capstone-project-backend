@@ -16,6 +16,8 @@ import webHooCheckoutRouter from "./services/stripe/webhookCheckout.js";
 import createCheckoutSessionRouter from "./services/stripe/create-checkout-session.js";
 import sharedRideRouter from "./services/sharedRide/index.js";
 import usersRouter from "./services/user/index.js";
+import passport from "passport";
+import googleStrategy from "./services/auth/googleOauth.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -43,6 +45,7 @@ server.use(
 
 server.use(cors(corsOpts));
 server.use(express.json());
+server.use(passport.initialize());
 
 //************************ROUTERS**************************
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
@@ -51,6 +54,7 @@ server.use("/bookings", bookingRouter);
 server.use("/shared-ride", sharedRideRouter);
 server.use("/create-checkout-session", createCheckoutSessionRouter);
 server.use("/users", usersRouter);
+passport.use("google", googleStrategy);
 //************************ERROR MIDDLEWARE***********************
 
 server.use(notFoundErrHandler);

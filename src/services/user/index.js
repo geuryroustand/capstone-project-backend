@@ -1,5 +1,6 @@
 import express from "express";
 import createHttpError from "http-errors";
+import passport from "passport";
 import { JWTAuthMiddleware } from "../auth/middlewares.js";
 import { JWTAuthenticate } from "../auth/tools.js";
 import userSchema from "./userSchema.js";
@@ -22,6 +23,29 @@ usersRouter.post("/register", async (req, res, next) => {
   }
 });
 
+usersRouter.get(
+  "/googleLogin",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
+
+usersRouter.get(
+  "/googleRedirect",
+  passport.authenticate("google"),
+  async (req, res, next) => {
+    console.log("user", req.user);
+    try {
+      // const { name, surname, _id, avatar, token } = req.user;
+
+      // res.send({ name, surname, _id, avatar, token });
+      const { accessToken, refreshToken } = req.user.tokens;
+      res.redirect(
+        `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
+      );
+    } catch (error) {
+      next(error);
+    }
+  }
+);
 usersRouter.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;

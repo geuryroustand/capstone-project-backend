@@ -20,9 +20,16 @@ const userSchema = new Schema(
     },
     password: {
       type: String,
-      required: [true, " Password is required"],
+      required: function () {
+        return !Boolean(this.googleId);
+      },
     },
-
+    googleId: {
+      type: String,
+      required: function () {
+        return !Boolean(this.password);
+      },
+    },
     avatar: {
       type: String,
       default: "https://ui-avatars.com/api/?name=Unnamed+User",
@@ -38,7 +45,9 @@ const userSchema = new Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
+  if (!this.googleId) {
+    this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
+  }
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 12);
   }
