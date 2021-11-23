@@ -23,6 +23,11 @@ const userSchema = new Schema(
       required: [true, " Password is required"],
     },
 
+    avatar: {
+      type: String,
+      default: "https://ui-avatars.com/api/?name=Unnamed+User",
+    },
+
     refreshToken: {
       type: String,
     },
@@ -33,6 +38,7 @@ const userSchema = new Schema(
 );
 
 userSchema.pre("save", async function (next) {
+  this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 12);
   }
