@@ -39,11 +39,10 @@ usersRouter.get(
       // res.send({ name, surname, _id, avatar, token });
       const { accessToken, refreshToken } = req.user.tokens;
 
-      localStorage.setItem("accessToken", accessToken);
-
       res.redirect(
         `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
       );
+      localStorage.setItem("accessToken", accessToken);
     } catch (error) {
       next(error);
     }
