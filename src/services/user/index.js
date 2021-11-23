@@ -42,7 +42,6 @@ usersRouter.get(
       res.redirect(
         `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
       );
-      localStorage.setItem("accessToken", accessToken);
     } catch (error) {
       next(error);
     }
