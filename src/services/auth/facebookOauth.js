@@ -2,6 +2,7 @@ import passport from "passport";
 
 import FacebookStrategy from "passport-facebook";
 import userSchema from "../user/userSchema.js";
+import { JWTAuthenticate } from "./tools.js";
 
 const facebookStrategy = new FacebookStrategy(
   {
@@ -17,9 +18,24 @@ const facebookStrategy = new FacebookStrategy(
       const user = await userSchema.findOne({ facebookId: profile.id });
 
       if (user) {
-      }
+        const tokens = await JWTAuthenticate(user);
+        passportNext(null, { tokens });
+      } else {
+        const newUser = {
+          name: profile.displayName.split(" ")[0],
+          surname: profile.displayName.split(" ")[1],
+          email: profile.emails[0].value,
+          avatar: profile.photos[0].value,
+          facebookId: profile.id,
+        };
 
-      passportNext(null, profile);
+        const createNewUser = await userSchema.create(newUser);
+
+        const tokens = await JWTAuthenticate(createNewUser);
+        passportNext(null, {
+          tokens,
+        });
+      }
     } catch (error) {
       passportNext(error);
     }

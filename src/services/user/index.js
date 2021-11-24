@@ -58,14 +58,11 @@ usersRouter.get(
   async (req, res, next) => {
     try {
       // const { name, surname, _id, avatar, token } = req.user;
-
       // res.send({ name, surname, _id, avatar, token });
-      // const { accessToken, refreshToken } = req.user.tokens;
-      console.log("req", req.user);
-      res.redirect(`/`);
-      // res.redirect(
-      //   `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
-      // );
+      const { accessToken, refreshToken } = req.user.tokens;
+      res.redirect(
+        `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
+      );
     } catch (error) {
       next(error);
     }
