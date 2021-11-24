@@ -14,7 +14,10 @@ const facebookStrategy = new FacebookStrategy(
   async (accessToken, refreshToken, profile, passportNext) => {
     try {
       console.log("facebookPr", profile);
-      //  const user = await userSchema.findOne({  facebookId: profile})
+      const user = await userSchema.findOne({ facebookId: profile.id });
+
+      if (user) {
+      }
 
       passportNext(null, profile);
     } catch (error) {
