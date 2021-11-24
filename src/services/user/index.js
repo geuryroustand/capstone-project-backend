@@ -49,14 +49,17 @@ usersRouter.get(
 
 usersRouter.get(
   "/facebookLogin",
-  passport.authenticate("facebook", { scope: ["profile", "email"] })
+  passport.authenticate("facebook", { scope: ["user_friends", "manage_pages"] })
 );
+
 usersRouter.get(
   "/facebookRedirect",
   passport.authenticate("facebook"),
   async (req, res, next) => {
     try {
       console.log(req.user);
+
+      res.redirect("/");
       next();
     } catch (error) {
       next(error);

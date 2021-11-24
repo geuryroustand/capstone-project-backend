@@ -26,8 +26,8 @@ passport.serializeUser(function (data, nextPassport) {
   nextPassport(null, data);
 });
 
-// passport.deserializeUser(function (data, nextPassport) {
-//   nextPassport(null, data);
-// });
+passport.deserializeUser(function (data, nextPassport) {
+  nextPassport(null, data);
+});
 
 export default facebookStrategy;
