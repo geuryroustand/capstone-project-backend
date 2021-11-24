@@ -21,10 +21,16 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: function () {
-        return !Boolean(this.googleId);
+        return !Boolean(this.googleId || this.facebookId);
       },
     },
     googleId: {
+      type: String,
+      required: function () {
+        return !Boolean(this.password);
+      },
+    },
+    facebookId: {
       type: String,
       required: function () {
         return !Boolean(this.password);

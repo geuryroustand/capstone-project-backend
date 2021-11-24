@@ -28,6 +28,7 @@
     "multer": "^1.4.3",
     "multer-storage-cloudinary": "^4.0.0",
     "passport": "^0.5.0",
+    "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0",
     "query-to-mongo": "^0.10.1",
     "stripe": "^8.185.0"

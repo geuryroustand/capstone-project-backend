@@ -32,7 +32,6 @@ usersRouter.get(
   "/googleRedirect",
   passport.authenticate("google"),
   async (req, res, next) => {
-    console.log("user", req.user);
     try {
       // const { name, surname, _id, avatar, token } = req.user;
 
@@ -42,6 +41,24 @@ usersRouter.get(
       res.redirect(
         `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
       );
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
+usersRouter.get(
+  "/facebookLogin",
+  passport.authenticate("facebook", { scope: ["manage_pages", "user_friends"] })
+);
+
+usersRouter.get(
+  "facebookRedirect",
+  passport.authenticate("facebook"),
+  async (req, res, next) => {
+    try {
+      console.log(req.user);
+      next();
     } catch (error) {
       next(error);
     }

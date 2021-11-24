@@ -18,6 +18,7 @@ import sharedRideRouter from "./services/sharedRide/index.js";
 import usersRouter from "./services/user/index.js";
 import passport from "passport";
 import googleStrategy from "./services/auth/googleOauth.js";
+import facebookStrategy from "./services/auth/facebookOauth.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -55,6 +56,8 @@ server.use("/shared-ride", sharedRideRouter);
 server.use("/create-checkout-session", createCheckoutSessionRouter);
 server.use("/users", usersRouter);
 passport.use("google", googleStrategy);
+passport.use("facebook", facebookStrategy);
+
 //************************ERROR MIDDLEWARE***********************
 
 server.use(notFoundErrHandler);
