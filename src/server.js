@@ -47,7 +47,7 @@ server.use(
 server.use(cors(corsOpts));
 server.use(express.json());
 server.use(passport.initialize());
-server.use(passport.session());
+// server.use(passport.session());
 
 //************************ROUTERS**************************
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
