@@ -49,26 +49,15 @@ usersRouter.get(
 
 usersRouter.get(
   "/facebookLogin",
-  passport.authenticate("facebook", { scope: ["user_friends", "manage_pages"] })
+  passport.authenticate("facebook", { scope: ["email"] })
 );
 
 usersRouter.get(
   "/facebookRedirect",
-  passport.authenticate("facebook"),
-  async (req, res, next) => {
-    try {
-      // const { name, surname, _id, avatar, token } = req.user;
-
-      // res.send({ name, surname, _id, avatar, token });
-      const { accessToken, refreshToken } = req.user.tokens;
-
-      res.redirect(
-        `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
-      );
-    } catch (error) {
-      next(error);
-    }
-  }
+  passport.authenticate("facebook", {
+    successRedirect: "/",
+    failureRedirect: "/register",
+  })
 );
 
 usersRouter.post("/login", async (req, res, next) => {

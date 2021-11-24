@@ -8,24 +8,24 @@ const facebookStrategy = new FacebookStrategy(
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
     callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
-    // callbackURL: `https://localhost:3000/users/facebookRedirect`,
+    // callbackURL: `http://localhost:3000/users/facebookRedirect`,
+    profileFields: ["id", "displayName", "photos", "email"],
   },
-  async (accessToken, refreshToken, facebookProfile, passportNext) => {
+  async (accessToken, refreshToken, profile, passportNext) => {
     try {
-      console.log("facebookPr", facebookProfile);
-      //  const user = await userSchema.findOne({  facebookId:})
+      console.log("facebookPr", profile);
+      //  const user = await userSchema.findOne({  facebookId: profile})
 
-      passportNext(null, facebookProfile);
+      passportNext(null, profile);
     } catch (error) {
       passportNext(error);
     }
   }
 );
 
-passport.serializeUser(function (data, nextPassport) {
-  nextPassport(null, data);
+passport.serializeUser(function (data, passportNext) {
+  passportNext(null, data);
 });
-
 // passport.deserializeUser(function (data, nextPassport) {
 //   nextPassport(null, data);
 // });
