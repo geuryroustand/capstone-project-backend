@@ -51,9 +51,10 @@ const userSchema = new Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  if (!this.googleId || !this.facebookId) {
-    this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
-  }
+  // if (!this.facebookId || !this.googleId) {
+  //   this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
+  // }
+
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 12);
   }
