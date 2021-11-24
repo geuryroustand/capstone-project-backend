@@ -54,7 +54,7 @@ usersRouter.get(
 
 usersRouter.get(
   "/facebookRedirect",
-  passport.authenticate("google"),
+  passport.authenticate("facebook"),
   async (req, res, next) => {
     try {
       // const { name, surname, _id, avatar, token } = req.user;
