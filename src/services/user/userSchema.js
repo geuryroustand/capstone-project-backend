@@ -51,7 +51,7 @@ const userSchema = new Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  if (!this.googleId) {
+  if (!this.googleId || !facebookId) {
     this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
   }
   if (this.isModified("password")) {
