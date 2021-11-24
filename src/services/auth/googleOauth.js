@@ -7,7 +7,7 @@ const googleStrategy = new GoogleStraStrategy(
   {
     clientID: process.env.GOOGLE_OAUTH_ID,
     clientSecret: process.env.GOOGLE_OAUTH_SECRET,
-    callbackURL: `https://vacationstaxi.herokuapp.com/users/googleRedirect`,
+    callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
   },
   async (accessToken, refreshToken, googleProfile, passportNext) => {
     try {
