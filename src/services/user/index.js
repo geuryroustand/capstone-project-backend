@@ -57,15 +57,20 @@ usersRouter.get(
   passport.authenticate("facebook"),
   async (req, res, next) => {
     try {
-      console.log(req.user);
+      // const { name, surname, _id, avatar, token } = req.user;
 
-      res.redirect("/");
-      next();
+      // res.send({ name, surname, _id, avatar, token });
+      const { accessToken, refreshToken } = req.user.tokens;
+
+      res.redirect(
+        `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
+      );
     } catch (error) {
       next(error);
     }
   }
 );
+
 usersRouter.post("/login", async (req, res, next) => {
   try {
     const { email, password } = req.body;

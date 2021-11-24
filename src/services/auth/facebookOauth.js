@@ -8,7 +8,7 @@ const facebookStrategy = new FacebookStrategy(
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
     callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
-    // callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
+    // callbackURL: `https://localhost:3000/users/facebookRedirect`,
   },
   async (accessToken, refreshToken, facebookProfile, passportNext) => {
     try {
@@ -26,8 +26,8 @@ passport.serializeUser(function (data, nextPassport) {
   nextPassport(null, data);
 });
 
-passport.deserializeUser(function (data, nextPassport) {
-  nextPassport(null, data);
-});
+// passport.deserializeUser(function (data, nextPassport) {
+//   nextPassport(null, data);
+// });
 
 export default facebookStrategy;
