@@ -27,13 +27,13 @@ const userSchema = new Schema(
     googleId: {
       type: String,
       required: function () {
-        return !Boolean(this.password);
+        return !Boolean(this.password || this.facebookId);
       },
     },
     facebookId: {
       type: String,
       required: function () {
-        return !Boolean(this.password);
+        return !Boolean(this.password || this.googleId);
       },
     },
     avatar: {
