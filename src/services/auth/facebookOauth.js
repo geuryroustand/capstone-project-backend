@@ -7,7 +7,7 @@ const facebookStrategy = new FacebookStrategy(
   {
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: `http://localhost:3000/users/facebookRedirect`,
+    callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
     // callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
   },
   async (accessToken, refreshToken, facebookProfile, passportNext) => {
