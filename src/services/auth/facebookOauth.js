@@ -14,6 +14,7 @@ const facebookStrategy = new FacebookStrategy(
   },
   async (accessToken, refreshToken, profile, passportNext) => {
     try {
+      console.log(profile.photos[0].value);
       const user = await userSchema.findOne({ facebookId: profile.id });
       if (user) {
         const tokens = await JWTAuthenticate(user);

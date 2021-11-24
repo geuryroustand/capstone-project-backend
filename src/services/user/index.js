@@ -60,7 +60,6 @@ usersRouter.get(
       // const { name, surname, _id, avatar, token } = req.user;
       // res.send({ name, surname, _id, avatar, token });
       const { accessToken, refreshToken } = req.user.tokens;
-      console.log("token", accessToken, refreshToken);
       res.redirect(
         `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
       );
