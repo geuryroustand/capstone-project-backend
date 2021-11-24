@@ -54,10 +54,21 @@ usersRouter.get(
 
 usersRouter.get(
   "/facebookRedirect",
-  passport.authenticate("facebook", {
-    successRedirect: "/",
-    failureRedirect: "/register",
-  })
+  passport.authenticate("google"),
+  async (req, res, next) => {
+    try {
+      // const { name, surname, _id, avatar, token } = req.user;
+
+      // res.send({ name, surname, _id, avatar, token });
+      const { accessToken, refreshToken } = req.user.tokens;
+
+      res.redirect(
+        `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
+      );
+    } catch (error) {
+      next(error);
+    }
+  }
 );
 
 usersRouter.post("/login", async (req, res, next) => {
