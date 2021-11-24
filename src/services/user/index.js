@@ -33,14 +33,17 @@ usersRouter.get(
   passport.authenticate("google"),
   async (req, res, next) => {
     try {
+      console.log(" ref", req.user);
       // const { name, surname, _id, avatar, token } = req.user;
 
       // res.send({ name, surname, _id, avatar, token });
-      const { accessToken, refreshToken } = req.user.tokens;
+      // const { accessToken, refreshToken } = req.user.tokens;
 
-      res.redirect(
-        `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
-      );
+      res.redirect("/");
+
+      // res.redirect(
+      //   `${process.env.FE_PROD_URL}/?accessToken=${accessToken}&refreshToken=${refreshToken}`
+      // );
     } catch (error) {
       next(error);
     }

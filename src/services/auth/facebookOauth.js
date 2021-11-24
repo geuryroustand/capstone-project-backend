@@ -9,7 +9,7 @@ const facebookStrategy = new FacebookStrategy(
     clientSecret: process.env.FACEBOOK_APP_SECRET,
     callbackURL: `https://vacationstaxi.herokuapp.com/users/facebookRedirect`,
     // callbackURL: `http://localhost:3000/users/facebookRedirect`,
-    // profileFields: ["id", "displayName", "photos", "email"],
+    profileFields: ["id", "displayName", "photos", "email"],
   },
   async (accessToken, refreshToken, profile, passportNext) => {
     try {
