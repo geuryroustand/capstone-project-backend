@@ -47,11 +47,11 @@ server.use(
 server.use(cors(corsOpts));
 server.use(express.json());
 server.use(passport.initialize());
+server.use(passport.session());
 
 //************************ROUTERS**************************
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
 server.use("/bookings", bookingRouter);
-// server.use("/users", userRouter);
 server.use("/shared-ride", sharedRideRouter);
 server.use("/create-checkout-session", createCheckoutSessionRouter);
 server.use("/users", usersRouter);
