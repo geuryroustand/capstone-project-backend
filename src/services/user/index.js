@@ -98,4 +98,19 @@ usersRouter.get("/me", JWTAuthMiddleware, async (req, res, next) => {
   }
 });
 
+usersRouter.patch("/me", JWTAuthMiddleware, async (req, res, next) => {
+  try {
+    const { name, surname, email } = req.body;
+
+    req.user.name = `${name ? name : req.user.name}`;
+    req.user.surname = `${surname ? surname : req.user.surname}`;
+    req.user.email = `${email ? email : req.user.email}`;
+
+    await req.user.save();
+    res.send(req.user);
+  } catch (error) {
+    next(error);
+  }
+});
+
 export default usersRouter;
