@@ -2,6 +2,7 @@ import express from "express";
 import createHttpError from "http-errors";
 import sharedRideSchema from "./sharedRideSchema.js";
 import q2m from "query-to-mongo";
+import { JWTAuthMiddleware } from "../auth/middlewares.js";
 
 const sharedRideRouter = express.Router();
 
@@ -9,17 +10,16 @@ sharedRideRouter.get("/", async (req, res, next) => {
   try {
     const query = q2m(req.query);
 
-    const findSharedRide = await sharedRideSchema.find(
-      query.criteria,
-      query.options.fields
-    );
+    const findSharedRide = await sharedRideSchema
+      .find(query.criteria, query.options.fields)
+      .populate("user");
 
     res.send(findSharedRide);
   } catch (error) {
     next(error);
   }
 });
-sharedRideRouter.post("/", async (req, res, next) => {
+sharedRideRouter.post("/", JWTAuthMiddleware, async (req, res, next) => {
   try {
     const createPostSharedRide = await sharedRideSchema.create(req.body);
     const { _id } = createPostSharedRide;

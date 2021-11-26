@@ -58,6 +58,30 @@ locationsRouter.post("/", async (req, res, next) => {
   }
 });
 
+locationsRouter.post("/search", async (req, res, next) => {
+  try {
+    let searchedLocations = req.body.location;
+
+    let findLocation = await locationSchema
+      .find({
+        location: { $regex: new RegExp(".*" + searchedLocations + ".*", "i") },
+      })
+      .limit(10)
+      .exec();
+
+    console.log(searchedLocations);
+    res.send(findLocation);
+
+    // const createNewLocation = await locationSchema.create(req.body);
+
+    // const { _id } = createNewLocation;
+
+    res.send(req.body);
+  } catch (error) {
+    next(error);
+  }
+});
+
 locationsRouter.put("/:locationId", async (req, res, next) => {
   try {
     const createNewLocation = await locationSchema.findByIdAndUpdate(
