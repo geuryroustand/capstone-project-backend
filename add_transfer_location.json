@@ -1,0 +1,3462 @@
+[
+  {
+    "data": [
+      {
+        "fld_id": "3",
+        "fld_location": "Puerto Plata Airport (POP) ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "4",
+        "fld_location": "La Romana Airport (LRM)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "8",
+        "fld_location": "La Isabella Airport (JBQ)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "9",
+        "fld_location": "Punta Cana Airport (PUJ)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "10",
+        "fld_location": "Samana Airport (AZS)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "11",
+        "fld_location": "Santiago Airport (STI)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "12",
+        "fld_location": "Santo Domingo Airport (SDQ) ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "1",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "13",
+        "fld_location": "Bani (Paya)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "14",
+        "fld_location": "Boca Chica",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "15",
+        "fld_location": "Bonao",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "16",
+        "fld_location": "Cabarete",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "17",
+        "fld_location": "Cabrera / BahÃ­a PrÃ­ncipe  Rio San Juan",
+        "title_de": "",
+        "title_ru": "",
+        "title_com_do": "",
+        "location_type": "2",
+        "fld_added_on": "2017-05-18"
+      },
+      {
+        "fld_id": "18",
+        "fld_location": "Cap Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "19",
+        "fld_location": "Club Med",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "20",
+        "fld_location": "Dajabon",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "21",
+        "fld_location": "Gran Bahia Principe La Romana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "22",
+        "fld_location": "Jarabacoa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "23",
+        "fld_location": "Juan Dolio",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "24",
+        "fld_location": "La Romana (Bayahibe)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "25",
+        "fld_location": "La Romana (Casa de Campo, Cruise Port)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "26",
+        "fld_location": "Luperon",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "27",
+        "fld_location": "Mao (Valverde)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "28",
+        "fld_location": "Puerto Plata (Cofresi)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "29",
+        "fld_location": "Puerto Plata (Playa Dorada)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "30",
+        "fld_location": "Punta Cana  Bavaro /Hotels ",
+        "title_de": "",
+        "title_ru": "",
+        "title_com_do": "",
+        "location_type": "2",
+        "fld_added_on": "2017-08-22"
+      },
+      {
+        "fld_id": "31",
+        "fld_location": "Punta Cana  Uvero Alto / Hotels",
+        "title_de": "",
+        "title_ru": "",
+        "title_com_do": "",
+        "location_type": "2",
+        "fld_added_on": "2017-08-22"
+      },
+      {
+        "fld_id": "32",
+        "fld_location": "Samana (GBP Cayacoa, GBP Cayo Levantado, etc.)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "33",
+        "fld_location": "Samana (Las Galeras)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "34",
+        "fld_location": "Samana (Las Terrenas)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "35",
+        "fld_location": "Santiago (City)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "36",
+        "fld_location": "Santo Domingo (City)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": null,
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "37",
+        "fld_location": "Sosua",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": null,
+        "fld_added_on": "2014-06-24"
+      },
+      {
+        "fld_id": "38",
+        "fld_location": "Puerto Plata (Cabarete & Sosua)",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": null,
+        "fld_added_on": "2017-07-12"
+      },
+      {
+        "fld_id": "40",
+        "fld_location": "Bahia Principe Cayacoa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": null,
+        "fld_added_on": "2017-09-18"
+      },
+      {
+        "fld_id": "41",
+        "fld_location": "Bahia Principe Portillo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": null,
+        "fld_added_on": "2017-09-26"
+      },
+      {
+        "fld_id": "42",
+        "fld_location": "Bahia Principe Punta cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "2",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "43",
+        "fld_location": "Alsol Del Mar Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "44",
+        "fld_location": "Alsol luxury Village ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "45",
+        "fld_location": "Alsol Tiara Cap Cana ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "46",
+        "fld_location": "Apartahotel Green Coast",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "47",
+        "fld_location": "Barcelo Bavaro Beach - Adult Only",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "48",
+        "fld_location": "Barcelo Bavaro Palace",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "49",
+        "fld_location": "Barcelo Bavaro Palace Deluxe",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "50",
+        "fld_location": "Barcelo Dominican Beach",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "51",
+        "fld_location": "Barcelo premium Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "52",
+        "fld_location": "Barcelo Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "53",
+        "fld_location": "Bavaro Green",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "54",
+        "fld_location": "Bavaro Princess All Suites Resort, Spa & Casino",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "55",
+        "fld_location": "Be Live Collection Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "56",
+        "fld_location": "Blue Beach Punta Cana Luxury Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "57",
+        "fld_location": "Cappuccino Mare",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "58",
+        "fld_location": "Capri Beach House",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "59",
+        "fld_location": "Caribe Club Princess Beach Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "60",
+        "fld_location": "Catalonia Bavaro Resort Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "61",
+        "fld_location": "Catalonia Royal Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "62",
+        "fld_location": "Chateau Del Mar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "63",
+        "fld_location": "Club Med Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "64",
+        "fld_location": "Dreams Palm Beach Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "65",
+        "fld_location": "Eden Roc at Cap Cana ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "66",
+        "fld_location": "Fishing Lodge Cap Cana ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "67",
+        "fld_location": "Four Points by Sheraton",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "68",
+        "fld_location": "Grand Bahia Principe Ambar ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "69",
+        "fld_location": "Grand Bahia Principe Bavaro",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "70",
+        "fld_location": "Grand Bahia Principe Esmeralda",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "71",
+        "fld_location": "Grand Bahia Principe Fantasia",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "72",
+        "fld_location": "Grand Bahia Principe Premier",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "73",
+        "fld_location": "Grand Bahia Principe Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "74",
+        "fld_location": "Grand Bahia Principe Turquesa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "75",
+        "fld_location": "Grand Palladium Bavaro Suites Resort and Spa ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "76",
+        "fld_location": "Grand Palladium Palace Resort Spa & Casino",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "77",
+        "fld_location": "Grand Palladium Punta Cana Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "78",
+        "fld_location": "Hard Rock Hotel & Casino Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "79",
+        "fld_location": "Hotel Cortecito Inn B?varo ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "80",
+        "fld_location": "Hotel Flamboyan",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "81",
+        "fld_location": "Hotel Green Coast Deluxe",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "82",
+        "fld_location": "Hotel Merengue Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "83",
+        "fld_location": "Hotel Next Nivel ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "84",
+        "fld_location": "Hotel Primaveral",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "85",
+        "fld_location": "Hotel Riu Republica",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "86",
+        "fld_location": "Iberostar Bavaro Suites",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "87",
+        "fld_location": "Iberostar Dominicana ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "88",
+        "fld_location": "Iberostar Grand Hotel Bavaro",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "89",
+        "fld_location": "Iberostar Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "90",
+        "fld_location": "Ifa Villas Bavaro Resort & Spa ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "91",
+        "fld_location": "Karibo Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "92",
+        "fld_location": "Laguna  Golf Bavaro",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "93",
+        "fld_location": "Los Corales Villas & Aparts Ocean View",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "94",
+        "fld_location": "Luxury Bahia Principe Ambar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "95",
+        "fld_location": "Luxury Bahia Principe Esmeralda",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "96",
+        "fld_location": "Luxury Bahia Principe Fantasia",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "97",
+        "fld_location": "Majestic Colonial",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "98",
+        "fld_location": "Majestic Elegance",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "99",
+        "fld_location": "Majestic Mirage Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "100",
+        "fld_location": "Manaya Bed & Breakfast",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "101",
+        "fld_location": "Melia Caribe Tropical All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "102",
+        "fld_location": "Memories Splash Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "103",
+        "fld_location": "Mt Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "104",
+        "fld_location": "Natural Park Beach Eco Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "105",
+        "fld_location": "NH Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "106",
+        "fld_location": "Now Larimar Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "107",
+        "fld_location": "Occidental Caribe",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "108",
+        "fld_location": "Occidental Punta Cana Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "109",
+        "fld_location": "Ocean Blue & Sands Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "110",
+        "fld_location": "Paradisus Palma Real Golf & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "111",
+        "fld_location": "Paradisus Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "112",
+        "fld_location": "Playa Turquesa Ocean Club",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "113",
+        "fld_location": "Premium Level at Barcelo Bavaro Palace",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "114",
+        "fld_location": "Presidential Suites Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "115",
+        "fld_location": "Punta Blanca Golf & Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "116",
+        "fld_location": "Punta Cana Hostel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "117",
+        "fld_location": "Punta Cana Princess All Suites, Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "118",
+        "fld_location": "Punta Palmera At Cap Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "119",
+        "fld_location": "Renaissance Santo Domingo Jaragua Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "120",
+        "fld_location": "Reserve At Paradisus Palma Real",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "121",
+        "fld_location": "Reserve At Paradisus Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "122",
+        "fld_location": "Riu Bambu Hotel & Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "123",
+        "fld_location": "Riu Naiboa All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "124",
+        "fld_location": "Riu Palace Bavaro All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "125",
+        "fld_location": "Riu Palace Macao - Adults Only All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "126",
+        "fld_location": "Riu Palace Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "127",
+        "fld_location": "Riu Republica",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "128",
+        "fld_location": "Royal Prestige Suites Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "129",
+        "fld_location": "Royal Suites Turquesa By Palladium",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "130",
+        "fld_location": "Royalton Punta Cana Resort & Casino",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "131",
+        "fld_location": "Sanctuary Cap Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "132",
+        "fld_location": "Secrets Cap Cana Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "133",
+        "fld_location": "Secrets Royal Beach Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "134",
+        "fld_location": "Sunscape Bavaro Beach Punta Cana Resort ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "135",
+        "fld_location": "Sunscape Dominican Beach Punta Cana Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "136",
+        "fld_location": "The Golf Suites",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "137",
+        "fld_location": "The Level at Melia Caribe Tropical",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "138",
+        "fld_location": "The MT Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "139",
+        "fld_location": "Tropical Princess Beach Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "140",
+        "fld_location": "VIK Hotel Arena Blanca All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "141",
+        "fld_location": "Vik Hotel Cayena Beach",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "142",
+        "fld_location": "Villas Bavaro Ifa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "143",
+        "fld_location": "Vista Sol Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "144",
+        "fld_location": "Westin Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "145",
+        "fld_location": "Whala Bavaro",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "146",
+        "fld_location": "Xeliter Golden Bear Lodge Cap Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "147",
+        "fld_location": "Zen Oasis Club Med",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "148",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "3",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "149",
+        "fld_location": "Breathless Punta Cana Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "150",
+        "fld_location": "Chic Punta Cana, By Royalton",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "151",
+        "fld_location": "Dreams Punta Cana Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "152",
+        "fld_location": "Excellence El Carmen - Adults Only",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "153",
+        "fld_location": "Excellence Punta Cana - Adults Only",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "154",
+        "fld_location": "Nickelodeon Hotels & Resorts Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "155",
+        "fld_location": "Now Onyx Punta Cana All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "156",
+        "fld_location": "Sensatori Resort Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "157",
+        "fld_location": "Sirenis Cocotal Beach Resort Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "158",
+        "fld_location": "Sirenis Tropical Suites Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "159",
+        "fld_location": "Sivory Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "160",
+        "fld_location": "The Palms Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "161",
+        "fld_location": "Zoetry Agua Punta Cana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "162",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "4",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "163",
+        "fld_location": "Be Live Collection Canoa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "164",
+        "fld_location": "Cabana Elke",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "165",
+        "fld_location": "Cadaques Caribe Resort & Villas",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "166",
+        "fld_location": "Catalonia Gran Dominicus",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "167",
+        "fld_location": "Catalonia Royal La Romana All inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "168",
+        "fld_location": "Dreams Dominicus La Romana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "169",
+        "fld_location": "Dreams La Romana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "170",
+        "fld_location": "Hotel Bayahibe",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "171",
+        "fld_location": "Iberostar Hacienda Dominicus",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "172",
+        "fld_location": "Villa Baya Aparta Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "173",
+        "fld_location": "Viva Wyndham Dominicus Beach",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "174",
+        "fld_location": "Viva Wyndham Dominicus Palace",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "175",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "5",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "176",
+        "fld_location": "Casa de Campo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "177",
+        "fld_location": "Casa de Campo Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "178",
+        "fld_location": "Dreams La Romana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "179",
+        "fld_location": "Hostal Silvestre",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "180",
+        "fld_location": "La Estancia Golf Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "181",
+        "fld_location": "Grand Bahia Principe La Romana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "182",
+        "fld_location": "Luxury Bahia Principe Bouganville ",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "183",
+        "fld_location": "La Romana Cruise Ship Port",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "184",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "6",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "185",
+        "fld_location": "Antiguo Hotel Europa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "186",
+        "fld_location": "Barcelo Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "187",
+        "fld_location": "Billini Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "188",
+        "fld_location": "Boutique Hotel Palacio",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "189",
+        "fld_location": "BQ Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "190",
+        "fld_location": "Casa Conde Hotel Boutique",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "191",
+        "fld_location": "Casa Naemie",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "192",
+        "fld_location": "Casa Sanchez Boutique Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "193",
+        "fld_location": "Crowne Plaza Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "194",
+        "fld_location": "Dominican Fiesta Hotel-Casino",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "195",
+        "fld_location": "El Beaterio",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "196",
+        "fld_location": "Embassy Suites By Hilton",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "197",
+        "fld_location": "Grand Hotel Reyna",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "198",
+        "fld_location": "Hilton Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "199",
+        "fld_location": "Hodelpa Caribe Colonial",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "200",
+        "fld_location": "Holiday Inn Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "201",
+        "fld_location": "Hostal Nicolas De Ovando",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "202",
+        "fld_location": "Hostal San Francisco De  Asis",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "203",
+        "fld_location": "Hotel Discovery",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "204",
+        "fld_location": "Hotel Dona Elvira",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "205",
+        "fld_location": "Hotel Frances Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "206",
+        "fld_location": "Hotel Jade",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "207",
+        "fld_location": "Hotel La LLave Del Mar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "208",
+        "fld_location": "Hotel Mercure Comercial",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "209",
+        "fld_location": "Hotel Riparbella",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "210",
+        "fld_location": "Hotel Suite Colonial",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "211",
+        "fld_location": "JQ Marriott Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "212",
+        "fld_location": "JW Marriott Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "213",
+        "fld_location": "Maison Gautreaux",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "214",
+        "fld_location": "Napolitana Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "215",
+        "fld_location": "Occidental El Embajador",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "216",
+        "fld_location": "Paseo Colonial Aparta Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "217",
+        "fld_location": "Radisson Hotel  Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "218",
+        "fld_location": "Renaissance Santo Domingo Jaragua",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "219",
+        "fld_location": "Sheraton Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "220",
+        "fld_location": "Weston Suites & Hotel Santo Domingo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "221",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "7",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "222",
+        "fld_location": "Aparta Hotel Caribe Paraiso",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "223",
+        "fld_location": "Aparta Hotel Roma",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "224",
+        "fld_location": "Be Live Hamaca Beach",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "225",
+        "fld_location": "Be Live Hamaca Garden",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "226",
+        "fld_location": "Be Live Hamaca Suites",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "227",
+        "fld_location": "Boca Chica Beach Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "228",
+        "fld_location": "Don Juan Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "229",
+        "fld_location": "Hotel BelleVue Dominican Bay",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "230",
+        "fld_location": "Hotel Garant & Suites",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "231",
+        "fld_location": "Hotel Hamilton",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "232",
+        "fld_location": "Hotel Mango",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "233",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "8",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "234",
+        "fld_location": "Barcelo  Capella Beach",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "235",
+        "fld_location": "Coral Costa Caribe All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "236",
+        "fld_location": "Hotel Colonial Tropical",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "237",
+        "fld_location": "Juan Dolio Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "238",
+        "fld_location": "Los Marlins Suites Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "239",
+        "fld_location": "Playa Esmeralda Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "240",
+        "fld_location": "Plaza Real Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "241",
+        "fld_location": "Talanquera Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "242",
+        "fld_location": "Villa En Campo De Golf",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "243",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "9",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "244",
+        "fld_location": "Caribe Surf Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "245",
+        "fld_location": "Coconut Palms Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "246",
+        "fld_location": "Hooked Cabarete",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "247",
+        "fld_location": "Hotel Alegria",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "248",
+        "fld_location": "Hotel Celuisma Cabarete",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "249",
+        "fld_location": "Hotel Monte Cristo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "250",
+        "fld_location": "Hotel Villa Taina",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "251",
+        "fld_location": "Kite Beach Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "252",
+        "fld_location": "Kite Dreem Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "253",
+        "fld_location": "Millennium Resort & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "254",
+        "fld_location": "Oasis Cabarete Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "255",
+        "fld_location": "Ocean Manor Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "256",
+        "fld_location": "Playa Sans Souci Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "257",
+        "fld_location": "Sea Horse Ranch",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "258",
+        "fld_location": "Ultravioleta Boutique Residences",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "259",
+        "fld_location": "Velero Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "260",
+        "fld_location": "Viva Wyndham Tangerine",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "261",
+        "fld_location": "Watermark luxury oceanfront all suite hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "262",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "10",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "263",
+        "fld_location": "ApartHotel Costambar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "264",
+        "fld_location": "Be Live Collection Marien",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "265",
+        "fld_location": "Blue JackTar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "266",
+        "fld_location": "BlueBay Villas Doradas Adults Only",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "267",
+        "fld_location": "Casa Colonial Beach & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "268",
+        "fld_location": "Celuisma Tropical Playa Dorada",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "269",
+        "fld_location": "ClubHotel Riu Bachata",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "270",
+        "fld_location": "ClubHotel Riu Merengue",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "271",
+        "fld_location": "Cofresi Palm Beach & Spa Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "272",
+        "fld_location": "Costambar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "273",
+        "fld_location": "Crown Suites at Lifestyle Holidays Vacation Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "274",
+        "fld_location": "Dorado Club Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "275",
+        "fld_location": "Fun Royale Beach Resor",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "276",
+        "fld_location": "Gran Ventana Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "277",
+        "fld_location": "Grand Paradise Playa Dorada",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "278",
+        "fld_location": "Iberostar Costa Dorada",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "279",
+        "fld_location": "Lifestyle Tropical Beach Resort and Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "280",
+        "fld_location": "Occidental Allegro Puerto Plata",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "281",
+        "fld_location": "Presidential Suites Lifestyle Holidays Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "282",
+        "fld_location": "Puerto Plata Beach Club & Casino",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "283",
+        "fld_location": "Puerto Plata Village Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "284",
+        "fld_location": "Riu Bachata",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "285",
+        "fld_location": "Riu Bachata Hotel Puerto Plata",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "286",
+        "fld_location": "RIU Mambo All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "287",
+        "fld_location": "Riviera Azul",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "288",
+        "fld_location": "Sunscape Puerto Plata - All Inclusive",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "289",
+        "fld_location": "Crown Villas  Lifestyle Holidays Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "290",
+        "fld_location": "Residence Suites Lifestyle Holidays Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "291",
+        "fld_location": "Royal Suites  Lifestyle Holidays Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "292",
+        "fld_location": "Tropical Lifestyle Holidays Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "293",
+        "fld_location": "VH Gran Ventana Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "294",
+        "fld_location": "Victoria Golf & Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "295",
+        "fld_location": "Viva Wyndham Playa Dorada",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "296",
+        "fld_location": "Viva Wyndham V Heavens",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "11",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "297",
+        "fld_location": "Ahnvee Resort & Sports",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "298",
+        "fld_location": "Casa Marina Beach",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "299",
+        "fld_location": "Casa Marina Reef",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "300",
+        "fld_location": "Casa Valeria Boutique Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "301",
+        "fld_location": "Casa Veintiuno",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "302",
+        "fld_location": "Coral Blanco Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "303",
+        "fld_location": "Hotel El Colibri",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "304",
+        "fld_location": "Hotel el Rancho",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "305",
+        "fld_location": "Hotel Sosua Sunrise",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "306",
+        "fld_location": "Hotel Voramar Sosua",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "307",
+        "fld_location": "New Garden Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "308",
+        "fld_location": "Piergiorgio Palace Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "309",
+        "fld_location": "Rocky's Rock & Blues Bar and Hote",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "310",
+        "fld_location": "Sea Breeze Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "311",
+        "fld_location": "Sosua Bay Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "312",
+        "fld_location": "Sosua by the Sea",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "313",
+        "fld_location": "Topacio Azul Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "314",
+        "fld_location": "Tropix Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "315",
+        "fld_location": "Victorian House Boutique Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "316",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "12",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "317",
+        "fld_location": "Hotel Coyamar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "318",
+        "fld_location": "Aligio Aparthotel & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "319",
+        "fld_location": "Balcones del Atlantico",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "320",
+        "fld_location": "Boutique Hotel Las Ballenas Escondidas",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "321",
+        "fld_location": "Buchen Hotel & Apartments",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "322",
+        "fld_location": "Carpe Diem",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "323",
+        "fld_location": "Casa Lily & Coco",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "324",
+        "fld_location": "Casa Maravilla",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "325",
+        "fld_location": "Casa Nina",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "326",
+        "fld_location": "Castillo Romano",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "327",
+        "fld_location": "Clave Verde Ecolodge Holiday Apt",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "328",
+        "fld_location": "Condo Hotel Caribey",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "329",
+        "fld_location": "Coson Bay Hotel & Residence",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "330",
+        "fld_location": "Costarena Beach Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "331",
+        "fld_location": "Dominican Tree House Village",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "332",
+        "fld_location": "El Flamboyan Apartments",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "333",
+        "fld_location": "El Portillo Residences",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "334",
+        "fld_location": "Fata Morgana Hostel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "335",
+        "fld_location": "Figaro Boutique Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "336",
+        "fld_location": "Grand Bahia Principe Cayacoa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "337",
+        "fld_location": "Grand Bahia Principe El Portillo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "338",
+        "fld_location": "Luxury Bahia Principe Samana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "339",
+        "fld_location": "Luxury Bahia Principe Cayo Levantado",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "340",
+        "fld_location": "Hotel Acaya",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "341",
+        "fld_location": "Hotel Albachiara",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "342",
+        "fld_location": "Hotel Alisei",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "343",
+        "fld_location": "Hotel Atlantis",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "344",
+        "fld_location": "Hotel Casino Niza",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "345",
+        "fld_location": "Hotel Coco Plaza",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "346",
+        "fld_location": "Hotel El Rincon de Abi",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "347",
+        "fld_location": "Hotel Enjoy Las Terrenas",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "348",
+        "fld_location": "Hotel House Jardin Del Caribe",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "349",
+        "fld_location": "Hotel La Tortuga",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "350",
+        "fld_location": "Hotel Los Pinos",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "351",
+        "fld_location": "Hotel Palococo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "352",
+        "fld_location": "Hotel Playa Caribe",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "353",
+        "fld_location": "Hotel Playa Colibri",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "354",
+        "fld_location": "Hotel Punta Bonita",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "355",
+        "fld_location": "Hotel Punta Bonita Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "356",
+        "fld_location": "Hotel Residence Marilar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "357",
+        "fld_location": "Hotel Residencia El Balata",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "358",
+        "fld_location": "Hotel Samana Spring",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "359",
+        "fld_location": "Iguana Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "360",
+        "fld_location": "La casa de Sergio y Cristina B&B",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "361",
+        "fld_location": "La Dolce Vita Residence",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "362",
+        "fld_location": "La Residencia del Paseo",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "363",
+        "fld_location": "Las Cayenas Kanesh Beach Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "364",
+        "fld_location": "Las Palmas al Mar Residence",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "365",
+        "fld_location": "Liberty Bed & Breakfast B&B",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "366",
+        "fld_location": "Oasis Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "367",
+        "fld_location": "Residence Villa Mario e Marisa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "368",
+        "fld_location": "Residencia El Balata",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "369",
+        "fld_location": "Residencia Hotel Madrugada",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "370",
+        "fld_location": "Residencial Don Cesar",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "371",
+        "fld_location": "Resort Costa las Ballenas",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "372",
+        "fld_location": "Sublime Samana Hotel & Residences",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "373",
+        "fld_location": "The Bannister - Hotel & Yacht Club",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "374",
+        "fld_location": "Viva Residence Las Terrenas",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "375",
+        "fld_location": "Viva Wyndham V Samana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "376",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "13",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "377",
+        "fld_location": "Amhsa Marina Grand Paradise Samana",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "378",
+        "fld_location": "Bungalows of Las Galeras",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "379",
+        "fld_location": "Chalet Tropical Village",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "380",
+        "fld_location": "Grand Hotel Las Galeras Suites & Spa",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "381",
+        "fld_location": "Hotel el Marinique",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "382",
+        "fld_location": "La Tambora Beach Resort",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "383",
+        "fld_location": "Plaza Lusitania",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "384",
+        "fld_location": "Villa Serena Hotel",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "385",
+        "fld_location": "Xeliter Vista Mare",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "386",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "14",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "387",
+        "fld_location": "Amanera",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "15",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "388",
+        "fld_location": "Grand Bahia Principe San Juan",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "15",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "389",
+        "fld_location": "The Palace at Playa Grande",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "15",
+        "fld_added_on": "2017-10-11"
+      },
+      {
+        "fld_id": "390",
+        "fld_location": "Other Location",
+        "title_de": null,
+        "title_ru": null,
+        "title_com_do": null,
+        "location_type": "15",
+        "fld_added_on": "2017-10-11"
+      }
+    ]
+  }
+]

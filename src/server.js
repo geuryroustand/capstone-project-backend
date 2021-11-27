@@ -19,6 +19,8 @@ import usersRouter from "./services/user/index.js";
 import passport from "passport";
 import googleStrategy from "./services/auth/googleOauth.js";
 import facebookStrategy from "./services/auth/facebookOauth.js";
+import { data } from "../data.js";
+import locationSchema from "./services/locations/locationSchema.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -79,6 +81,16 @@ server.listen(port, async () => {
 
     console.table(listEndpoints(server));
     console.log("😊Successfully connected to mongo!🥰 😎" + port);
+
+    // let submitLocation = [];
+
+    // data.forEach(async (lo) => {
+    //   submitLocation.push({ location: lo.fld_location.trim() });
+    // });
+    // locationSchema.insertMany(submitLocation, (err) => {
+    //   if (err) return console.log(err);
+    //   console.log("SUCCESS");
+    // });
   } catch (error) {
     console.error("Db connection is failed ", error);
   }

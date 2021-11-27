@@ -66,7 +66,7 @@ locationsRouter.post("/search", async (req, res, next) => {
       .find({
         location: { $regex: new RegExp(".*" + searchedLocations + ".*", "i") },
       })
-      .limit(10)
+      .limit(5)
       .exec();
 
     console.log(searchedLocations);
