@@ -1,6 +1,7 @@
 import locationSchema from "./locationSchema.js";
 import q2m from "query-to-mongo";
 import express from "express";
+import createHttpError from "http-errors";
 
 const locationsRouter = express.Router();
 
@@ -60,23 +61,23 @@ locationsRouter.post("/", async (req, res, next) => {
 
 locationsRouter.post("/search", async (req, res, next) => {
   try {
-    let searchedLocations = req.body.location;
+    let searchedLocations = await req.body.location;
 
+    if (!searchedLocations) {
+      return next(createHttpError("req body cannot be empty"));
+    }
     let findLocation = await locationSchema
       .find({
         location: { $regex: new RegExp(".*" + searchedLocations + ".*", "i") },
       })
-      .limit(5)
+      .limit(6)
       .exec();
 
-    console.log(searchedLocations);
-    res.send(findLocation);
+    res.status(200).send(findLocation);
 
     // const createNewLocation = await locationSchema.create(req.body);
 
     // const { _id } = createNewLocation;
-
-    res.send(req.body);
   } catch (error) {
     next(error);
   }

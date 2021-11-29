@@ -11,12 +11,7 @@ const sharedRideSchema = new Schema(
         ref: "users",
       },
     ],
-    passengersName: {
-      type: String,
-    },
-    passengersSurname: {
-      type: String,
-    },
+
     email: {
       type: String,
     },
@@ -24,47 +19,38 @@ const sharedRideSchema = new Schema(
     phoneNumber: {
       type: String,
     },
-    arrivalAirlineName: {
+
+    pickLocation: {
       type: String,
     },
-    arrivalFlightNumber: {
-      type: String,
-    },
-    pickupLocationName: {
-      type: String,
-    },
-    arrivalDate: {
+    dropLocation: {
       type: String,
     },
 
-    departureAirlineName: {
+    date: {
       type: String,
     },
 
-    departureFlightNumber: {
+    airlineName: {
       type: String,
     },
 
-    dropLocationName: {
-      type: String,
-    },
-    departureDate: {
+    flightNumber: {
       type: String,
     },
 
-    journey: {
+    passenger: {
       type: String,
     },
-    passengers: {
-      type: Number,
-    },
-    taxiOption: {
+
+    haveFlight: {
       type: String,
     },
 
     specialRequest: {
       type: String,
     },
+
     totalPrice: {
       type: Number,
     },

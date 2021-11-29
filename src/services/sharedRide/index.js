@@ -21,7 +21,10 @@ sharedRideRouter.get("/", async (req, res, next) => {
 });
 sharedRideRouter.post("/", JWTAuthMiddleware, async (req, res, next) => {
   try {
-    const createPostSharedRide = await sharedRideSchema.create(req.body);
+    const createPostSharedRide = await sharedRideSchema.create({
+      ...req.body,
+      user: req.body._id,
+    });
     const { _id } = createPostSharedRide;
     res.status(201).send(_id);
   } catch (error) {
