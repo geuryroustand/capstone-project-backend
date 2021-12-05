@@ -4,13 +4,11 @@ const { model, Schema } = mongoose;
 
 const sharedRideSchema = new Schema(
   {
-    user: [
-      {
-        type: Schema.Types.ObjectId,
-        required: [true, "User ID is required"],
-        ref: "users",
-      },
-    ],
+    user: {
+      type: Schema.Types.ObjectId,
+      required: [true, "User ID is required"],
+      ref: "users",
+    },
 
     email: {
       type: String,
@@ -27,8 +25,8 @@ const sharedRideSchema = new Schema(
       type: String,
     },
 
-    date: {
-      type: String,
+    serviceDate: {
+      type: Date,
     },
 
     airlineName: {

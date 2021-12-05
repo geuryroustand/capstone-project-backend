@@ -10,6 +10,34 @@ sharedRideRouter.get("/", async (req, res, next) => {
   try {
     const query = q2m(req.query);
 
+    // console.log("que", req.query.serviceDate);
+
+    // const myDate = new Date("2022-12-30T00:30:00.000Z");
+
+    // console.log(myDate);
+
+    // console.log(new Date(`${req.query.serviceDate}`));
+
+    // const findSharedRide = await sharedRideSchema.find({
+    //   serviceDate: new ISODate(`${req.query.serviceDate}`),
+
+    //   // const findSharedRide = await sharedRideSchema.find({
+    //   //   serviceDate: {
+    //   //     $gte: new Date(`${req.query.serviceDate}`),
+    //   //   },
+
+    //   // serviceDate: {
+    //   //   $eq: new Date(`${req.query.serviceDate}`),
+    //   // },
+    // });
+
+    // pickLocation: req.query.pickLocation,
+    // dropLocation: req.query.dropLocation,
+
+    // `${req.query.serviceDate}`
+
+    // ISODate
+
     const findSharedRide = await sharedRideSchema
       .find(query.criteria, query.options.fields)
       .populate("user");
@@ -22,11 +50,12 @@ sharedRideRouter.get("/", async (req, res, next) => {
 sharedRideRouter.post("/", JWTAuthMiddleware, async (req, res, next) => {
   try {
     const createPostSharedRide = await sharedRideSchema.create({
+      user: req.user._id,
+      serviceDate: new Date(req.body.serviceDate),
       ...req.body,
-      user: req.body._id,
     });
-    const { _id } = createPostSharedRide;
-    res.status(201).send(_id);
+    // const { _id } = createPostSharedRide;
+    res.status(201).send(createPostSharedRide);
   } catch (error) {
     next(error);
   }

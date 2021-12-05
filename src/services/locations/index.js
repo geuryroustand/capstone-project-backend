@@ -8,8 +8,7 @@ const locationsRouter = express.Router();
 locationsRouter.get("/", async (req, res, next) => {
   try {
     const query = q2m(req.query);
-    const query1 = req.query;
-    console.log(query1);
+
     const getLocations = await locationSchema
       .find(query.criteria, query.options.fields)
       .limit(query.options.limit)
@@ -51,9 +50,9 @@ locationsRouter.post("/", async (req, res, next) => {
   try {
     const createNewLocation = await locationSchema.create(req.body);
 
-    const { _id } = createNewLocation;
+    // const { _id } = createNewLocation;
 
-    res.send(_id);
+    res.send(createNewLocation);
   } catch (error) {
     next(error);
   }

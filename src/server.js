@@ -21,6 +21,7 @@ import googleStrategy from "./services/auth/googleOauth.js";
 import facebookStrategy from "./services/auth/facebookOauth.js";
 import { data } from "../data.js";
 import locationSchema from "./services/locations/locationSchema.js";
+import commentsRouter from "./services/comments/index.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -55,6 +56,7 @@ server.use(passport.initialize());
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
 server.use("/bookings", bookingRouter);
 server.use("/shared-ride", sharedRideRouter);
+server.use("/comments", commentsRouter);
 server.use("/create-checkout-session", createCheckoutSessionRouter);
 server.use("/users", usersRouter);
 passport.use("google", googleStrategy);
