@@ -61,4 +61,34 @@ sharedRideRouter.post("/", JWTAuthMiddleware, async (req, res, next) => {
   }
 });
 
+sharedRideRouter.post(
+  "/comments",
+  JWTAuthMiddleware,
+  async (req, res, next) => {
+    try {
+      const addComment = await sharedRideSchema.findByIdAndUpdate(
+        req.body.postId,
+        {
+          $push: {
+            comments: {
+              comment: req.body.comment,
+              postDated: new Date(),
+              name: req.user.name,
+              surname: req.user.surname,
+              userId: req.user._id,
+              avatar: req.user.avatar,
+            },
+          },
+        },
+        {
+          new: true,
+        }
+      );
+      res.status(201).send(addComment);
+    } catch (error) {
+      next(error);
+    }
+  }
+);
+
 export default sharedRideRouter;

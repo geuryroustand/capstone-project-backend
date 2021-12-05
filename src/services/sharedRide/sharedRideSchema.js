@@ -10,6 +10,16 @@ const sharedRideSchema = new Schema(
       ref: "users",
     },
 
+    comments: [
+      // {
+      //   name: String,
+      //   surname: String,
+      //   postDated: Date,
+      //   avatar: String,
+      //   comment: String,
+      // },
+    ],
+
     email: {
       type: String,
     },
