@@ -10,15 +10,7 @@ const sharedRideSchema = new Schema(
       ref: "users",
     },
 
-    comments: [
-      // {
-      //   name: String,
-      //   surname: String,
-      //   postDated: Date,
-      //   avatar: String,
-      //   comment: String,
-      // },
-    ],
+    comments: [],
 
     email: {
       type: String,
@@ -55,7 +47,7 @@ const sharedRideSchema = new Schema(
       type: String,
     },
 
-    specialRequest: {
+    travelerCommentRequest: {
       type: String,
     },
 
