@@ -5,6 +5,7 @@ const { model, Schema } = mongoose;
 const sharedRideSchema = new Schema(
   {
     user: {
+      type: String,
       type: Schema.Types.ObjectId,
       required: [true, "User ID is required"],
       ref: "users",
