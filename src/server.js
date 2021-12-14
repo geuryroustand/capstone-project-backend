@@ -84,13 +84,18 @@ server.listen(port, async () => {
     console.table(listEndpoints(server));
     console.log("😊Successfully connected to mongo!🥰 😎" + port);
 
-    // let submitLocation = [];
+    let submitLocation = [];
 
-    // data.forEach(async (lo) => {
-    //   submitLocation.push({ location: lo.fld_location.trim() });
+    // data.forEach((lo) => {
+    //   // submitLocation.push({ location: lo.fld_location });
+    //   locationSchema.insertMany([{ location: lo.fld_location }], (err) => {
+    //     if (err) return console.error(err);
+    //     console.log("SUCCESS");
+    //   });
     // });
+
     // locationSchema.insertMany(submitLocation, (err) => {
-    //   if (err) return console.log(err);
+    //   if (err) return console.error(err);
     //   console.log("SUCCESS");
     // });
   } catch (error) {

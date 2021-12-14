@@ -21,7 +21,6 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   if (event.type === "checkout.session.completed") {
     const { customer_email, amount_total } = event.data.object;
 
-    console.log(event.data.object);
     const {
       name,
       surname,
@@ -58,33 +57,31 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       });
 
       res.status(200).send({ received: true });
+    } else {
+      const createBooking = await bookingSchema.create({
+        phoneNumber,
+        arrivalAirlineName,
+        arrivalFlightNumber,
+        arrivalDepartureAirport,
+        arrivalDate,
+
+        departureAirlineName,
+        departureFlightNumber,
+        departureDepartureAirport,
+        departureDate,
+
+        journey,
+        passengers,
+        taxiOption,
+
+        totalPrice: amount_total / 100,
+        email: customer_email,
+        passengersName: name,
+        passengersSurname: surname,
+      });
+
+      res.status(200).send();
     }
-
-    // else {
-    //   const createBooking = await bookingSchema.create({
-    //     phoneNumber,
-    //     arrivalAirlineName,
-    //     arrivalFlightNumber,
-    //     arrivalDepartureAirport,
-    //     arrivalDate,
-
-    //     departureAirlineName,
-    //     departureFlightNumber,
-    //     departureDepartureAirport,
-    //     departureDate,
-
-    //     journey,
-    //     passengers,
-    //     taxiOption,
-
-    //     totalPrice: 10.5,
-    //     email: customer_email,
-    //     passengersName: name,
-    //     passengersSurname: surname,
-    //   });
-
-    //   res.status(200).send();
-    // }
   }
 });
 
