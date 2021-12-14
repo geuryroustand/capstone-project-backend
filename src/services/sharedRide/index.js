@@ -50,12 +50,25 @@ sharedRideRouter.get("/", async (req, res, next) => {
 sharedRideRouter.post("/", JWTAuthMiddleware, async (req, res, next) => {
   try {
     const createPostSharedRide = await sharedRideSchema.create({
-      user: req.user._id,
+      user: req.user,
       serviceDate: new Date(req.body.serviceDate),
       ...req.body,
     });
     // const { _id } = createPostSharedRide;
     res.status(201).send(createPostSharedRide);
+  } catch (error) {
+    next(error);
+  }
+});
+
+sharedRideRouter.get("/comments/:id", async (req, res, next) => {
+  try {
+    const findSharedRide = await sharedRideSchema
+      .findById(req.params.id)
+
+      .populate("user");
+
+    res.send(findSharedRide);
   } catch (error) {
     next(error);
   }
@@ -74,10 +87,6 @@ sharedRideRouter.post(
               comment: req.body.comment,
               postDated: new Date(),
               user: req.user,
-              // name: req.user.name,
-              // surname: req.user.surname,
-              // userId: req.user._id,
-              // avatar: req.user.avatar,
             },
           },
         },
@@ -85,6 +94,7 @@ sharedRideRouter.post(
           new: true,
         }
       );
+
       res.status(201).send(addComment);
     } catch (error) {
       next(error);
