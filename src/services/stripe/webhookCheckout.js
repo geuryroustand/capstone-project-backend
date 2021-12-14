@@ -37,7 +37,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       departureFlightNumber,
       departureDepartureAirport,
       departureDate,
-      sharedRideYesOrNo,
+
       journey,
       passengers,
       taxiOption,
