@@ -48,6 +48,7 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
         journey: `${taxiSelected.journey}`,
         passengers: `${taxiSelected.passengers}`,
         taxiOption: `${taxiSelected.taxiOption}`,
+        sharedRideYesOrNo: `${taxiSelected.sharedRideYesOrNo}`,
       },
     });
 

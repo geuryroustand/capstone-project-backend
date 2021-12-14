@@ -1,6 +1,8 @@
 import express from "express";
 import Stripe from "stripe";
 import bookingSchema from "../booking/bookingSchema.js";
+import sharedRideSchema from "../sharedRide/sharedRideSchema.js";
+import userSchema from "../user/userSchema.js";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 const webHooCheckoutRouter = express.Router();
@@ -19,7 +21,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    const { customer_email, amount_total } = event.data.object;
+    const { customer_email, amount_total, sharedRideYesOrNo } =
+      event.data.object;
 
     const {
       name,
@@ -34,11 +37,29 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       departureFlightNumber,
       departureDepartureAirport,
       departureDate,
-
+      sharedRideYesOrNo,
       journey,
       passengers,
       taxiOption,
     } = event.data.object.metadata;
+
+    if (sharedRideYesOrNo === "Yes") {
+      const userFound = await userSchema.findOne({ email: customer_email });
+
+      if (userFound) {
+        await sharedRideSchema.create({
+          user: userFound._id,
+          pickLocation: arrivalAirlineName,
+          dropLocation: departureAirlineName,
+          serviceDate: arrivalDate,
+          airlineName: arrivalAirlineName,
+          flightNumber: arrivalFlightNumber,
+          passenger: passengers,
+          totalPrice: amount_total,
+          // haveFlight:
+        });
+      }
+    }
 
     if (journey === "OneWay") {
       const createOneWayBooking = await bookingSchema.create({
@@ -48,6 +69,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         arrivalDepartureAirport,
         arrivalDate,
         journey,
+        sharedRideYesOrNo,
         passengers,
         taxiOption,
         totalPrice: amount_total / 100,
