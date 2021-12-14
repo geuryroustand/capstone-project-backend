@@ -47,7 +47,7 @@ server.use(
 
 //************************MIDDLEWARE***********************
 
-server.use(cors(corsOpts));
+server.use(cors());
 server.use(express.json());
 server.use(passport.initialize());
 // server.use(passport.session());
