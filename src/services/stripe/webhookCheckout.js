@@ -21,8 +21,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
   }
 
   if (event.type === "checkout.session.completed") {
-    const { customer_email, amount_total, sharedRideYesOrNo } =
-      event.data.object;
+    const { customer_email, amount_total } = event.data.object;
 
     const {
       name,
@@ -37,7 +36,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       departureFlightNumber,
       departureDepartureAirport,
       departureDate,
-
+      sharedRideYesOrNo,
       journey,
       passengers,
       taxiOption,
@@ -65,6 +64,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           // haveFlight:
         });
       }
+
+      res.status(200).send({ received: true });
     }
 
     // if (journey === "OneWay") {
