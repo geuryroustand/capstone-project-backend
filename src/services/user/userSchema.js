@@ -22,19 +22,33 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: function () {
-        return !Boolean(this.googleId || this.facebookId);
+        return !Boolean(
+          this.googleId || this.facebookId || this.userBookingShared
+        );
       },
     },
     googleId: {
       type: String,
       required: function () {
-        return !Boolean(this.password || this.facebookId);
+        return !Boolean(
+          this.password || this.facebookId || this.userBookingShared
+        );
       },
     },
     facebookId: {
       type: String,
       required: function () {
-        return !Boolean(this.password || this.googleId);
+        return !Boolean(
+          this.password || this.googleId || this.userBookingShared
+        );
+      },
+    },
+    userBookingShared: {
+      type: String,
+      required: function () {
+        return !Boolean(
+          this.password || this.googleId || this.userBookingShared
+        );
       },
     },
     avatar: {

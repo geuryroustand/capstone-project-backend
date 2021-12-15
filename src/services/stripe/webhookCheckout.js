@@ -149,6 +149,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           name,
           surname,
           email: customer_email,
+          userBookingShared: "Yes",
         });
         if (journey === "OneWay") {
           //+++++++++++++++++ ARRIVAL SHARE RIDE POST ONE WAY
