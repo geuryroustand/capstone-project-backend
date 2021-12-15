@@ -27,15 +27,19 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       name,
       surname,
       phoneNumber,
+
       arrivalAirlineName,
       arrivalFlightNumber,
       arrivalDepartureAirport,
       arrivalDate,
+      pickUpLocation,
+      dropLocation,
 
       departureAirlineName,
       departureFlightNumber,
       departureDepartureAirport,
       departureDate,
+
       sharedRideYesOrNo,
       journey,
       passengers,
@@ -43,74 +47,242 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
     } = event.data.object.metadata;
 
     if (sharedRideYesOrNo === "Yes") {
+      // SEARCH FOR THE USER
+
       const userFound = await userSchema.findOne({ email: customer_email });
 
-      console.log(userFound);
-
-      console.log("===================================");
-
-      console.log("event", event.data.object);
-      console.log("metadata", event.data.object.metadata);
       if (userFound) {
-        await sharedRideSchema.create({
-          user: userFound._id,
-          pickLocation: arrivalAirlineName,
-          dropLocation: departureAirlineName,
-          serviceDate: arrivalDate,
-          airlineName: arrivalAirlineName,
-          flightNumber: arrivalFlightNumber,
-          passenger: passengers,
-          totalPrice: amount_total,
-          // haveFlight:
+        if (journey === "OneWay") {
+          //+++++++++++++++++ ARRIVAL SHARE RIDE POST ONE WAY
+          await sharedRideSchema.create({
+            user: userFound._id,
+            pickUpLocation,
+            dropLocation,
+            serviceDate: arrivalDate,
+            airlineName: arrivalAirlineName,
+            flightNumber: arrivalFlightNumber,
+            passenger: passengers,
+            totalPrice: amount_total / 100,
+            // haveFlight:
+          });
+
+          // CREATE BOOKING FOR ONEWAY
+
+          const createOneWayBooking = await bookingSchema.create({
+            phoneNumber,
+            arrivalAirlineName,
+            arrivalFlightNumber,
+            arrivalDepartureAirport,
+            arrivalDate,
+            journey,
+            sharedRideYesOrNo,
+            passengers,
+            taxiOption,
+            totalPrice: amount_total / 100,
+            email: customer_email,
+            passengersName: name,
+            passengersSurname: surname,
+          });
+
+          res.status(200).send({ received: true });
+        } else {
+          //+++++++++++++++++ ARRIVAL SHARE RIDE POST
+          await sharedRideSchema.create({
+            user: userFound._id,
+            pickUpLocation,
+            dropLocation,
+            serviceDate: arrivalDate,
+            airlineName: arrivalAirlineName,
+            flightNumber: arrivalFlightNumber,
+            passenger: passengers,
+            totalPrice: amount_total / 100,
+            // haveFlight:
+          });
+
+          //+++++++++++++++++ RETURN SHARE RIDE POST
+          await sharedRideSchema.create({
+            user: userFound._id,
+            pickUpLocation,
+            dropLocation,
+
+            airlineName: departureAirlineName,
+            flightNumber: departureFlightNumber,
+            serviceDate: departureDate,
+
+            passenger: passengers,
+            totalPrice: amount_total / 100,
+            // haveFlight:
+          });
+
+          // CREATE BOOKING FOR ROUNDTRIP
+
+          const createBooking = await bookingSchema.create({
+            phoneNumber,
+            arrivalAirlineName,
+            arrivalFlightNumber,
+            arrivalDepartureAirport,
+            arrivalDate,
+
+            departureAirlineName,
+            departureFlightNumber,
+            departureDepartureAirport,
+            departureDate,
+
+            journey,
+            passengers,
+            taxiOption,
+
+            totalPrice: amount_total / 100,
+            email: customer_email,
+            passengersName: name,
+            passengersSurname: surname,
+          });
+
+          res.status(200).send({ received: true });
+        }
+      } else {
+        // CREATE USER ACCOUNT
+        const createUser = await userSchema.create({
+          name,
+          surname,
+          email: customer_email,
         });
+        if (journey === "OneWay") {
+          //+++++++++++++++++ ARRIVAL SHARE RIDE POST ONE WAY
+          await sharedRideSchema.create({
+            user: createUser._id,
+            pickUpLocation,
+            dropLocation,
+            serviceDate: arrivalDate,
+            airlineName: arrivalAirlineName,
+            flightNumber: arrivalFlightNumber,
+            passenger: passengers,
+            totalPrice: amount_total / 100,
+            // haveFlight:
+          });
+
+          // CREATE BOOKING FOR ONEWAY
+
+          const createOneWayBooking = await bookingSchema.create({
+            phoneNumber,
+            arrivalAirlineName,
+            arrivalFlightNumber,
+            arrivalDepartureAirport,
+            arrivalDate,
+            journey,
+            sharedRideYesOrNo,
+            passengers,
+            taxiOption,
+            totalPrice: amount_total / 100,
+            email: customer_email,
+            passengersName: name,
+            passengersSurname: surname,
+          });
+
+          res.status(200).send({ received: true });
+        } else {
+          //+++++++++++++++++ ARRIVAL SHARE RIDE POST
+          await sharedRideSchema.create({
+            user: userFound._id,
+            pickUpLocation,
+            dropLocation,
+            serviceDate: arrivalDate,
+            airlineName: arrivalAirlineName,
+            flightNumber: arrivalFlightNumber,
+            passenger: passengers,
+            totalPrice: amount_total / 100,
+            // haveFlight:
+          });
+
+          //+++++++++++++++++ RETURN SHARE RIDE POST
+          await sharedRideSchema.create({
+            user: userFound._id,
+            pickUpLocation,
+            dropLocation,
+
+            airlineName: departureAirlineName,
+            flightNumber: departureFlightNumber,
+            serviceDate: departureDate,
+
+            passenger: passengers,
+            totalPrice: amount_total / 100,
+            // haveFlight:
+          });
+
+          // CREATE BOOKING FOR ROUNDTRIP
+
+          const createBooking = await bookingSchema.create({
+            phoneNumber,
+            arrivalAirlineName,
+            arrivalFlightNumber,
+            arrivalDepartureAirport,
+            arrivalDate,
+
+            departureAirlineName,
+            departureFlightNumber,
+            departureDepartureAirport,
+            departureDate,
+
+            journey,
+            passengers,
+            taxiOption,
+
+            totalPrice: amount_total / 100,
+            email: customer_email,
+            passengersName: name,
+            passengersSurname: surname,
+          });
+
+          res.status(200).send({ received: true });
+        }
       }
+    } else {
+      // USER PRIVATE RIDE
 
-      res.status(200).send({ received: true });
+      if (journey === "OneWay") {
+        const createOneWayBooking = await bookingSchema.create({
+          phoneNumber,
+          arrivalAirlineName,
+          arrivalFlightNumber,
+          arrivalDepartureAirport,
+          arrivalDate,
+          journey,
+          sharedRideYesOrNo,
+          passengers,
+          taxiOption,
+          totalPrice: amount_total / 100,
+          email: customer_email,
+          passengersName: name,
+          passengersSurname: surname,
+        });
+
+        res.status(200).send({ received: true });
+      } else {
+        const createBooking = await bookingSchema.create({
+          phoneNumber,
+          arrivalAirlineName,
+          arrivalFlightNumber,
+          arrivalDepartureAirport,
+          arrivalDate,
+
+          departureAirlineName,
+          departureFlightNumber,
+          departureDepartureAirport,
+          departureDate,
+
+          journey,
+          passengers,
+          taxiOption,
+
+          totalPrice: amount_total / 100,
+          email: customer_email,
+          passengersName: name,
+          passengersSurname: surname,
+        });
+
+        res.status(200).send({ received: true });
+      }
     }
-
-    // if (journey === "OneWay") {
-    //   const createOneWayBooking = await bookingSchema.create({
-    //     phoneNumber,
-    //     arrivalAirlineName,
-    //     arrivalFlightNumber,
-    //     arrivalDepartureAirport,
-    //     arrivalDate,
-    //     journey,
-    //     sharedRideYesOrNo,
-    //     passengers,
-    //     taxiOption,
-    //     totalPrice: amount_total / 100,
-    //     email: customer_email,
-    //     passengersName: name,
-    //     passengersSurname: surname,
-    //   });
-
-    //   res.status(200).send({ received: true });
-    // } else {
-    //   const createBooking = await bookingSchema.create({
-    //     phoneNumber,
-    //     arrivalAirlineName,
-    //     arrivalFlightNumber,
-    //     arrivalDepartureAirport,
-    //     arrivalDate,
-
-    //     departureAirlineName,
-    //     departureFlightNumber,
-    //     departureDepartureAirport,
-    //     departureDate,
-
-    //     journey,
-    //     passengers,
-    //     taxiOption,
-
-    //     totalPrice: amount_total / 100,
-    //     email: customer_email,
-    //     passengersName: name,
-    //     passengersSurname: surname,
-    //   });
-
-    //   res.status(200).send();
-    // }
   }
 });
 

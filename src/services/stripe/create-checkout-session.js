@@ -37,18 +37,22 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
         name: `${taxiSelected.name}`,
         surname: `${taxiSelected.surname}`,
         phoneNumber: `${taxiSelected.phoneNumber}`,
+        sharedRideYesOrNo: `${taxiSelected.sharedRideYesOrNo}`,
+        pickUpLocation: `${taxiSelected.pickUpLocation}`,
+        dropLocation: `${taxiSelected.dropLocation}`,
         arrivalAirlineName: `${taxiSelected.arrivalAirlineName}`,
         arrivalFlightNumber: `${taxiSelected.arrivalFlightNumber}`,
         arrivalDepartureAirport: `${taxiSelected.arrivalDepartureAirport}`,
+
         departureAirlineName: `${taxiSelected.departureAirlineName}`,
         departureFlightNumber: `${taxiSelected.departureFlightNumber}`,
         departureDepartureAirport: `${taxiSelected.departureDepartureAirport}`,
+
         arrivalDate: `${taxiSelected.arrivalDate}`,
         departureDate: `${taxiSelected.departureDate}`,
         journey: `${taxiSelected.journey}`,
         passengers: `${taxiSelected.passengers}`,
         taxiOption: `${taxiSelected.taxiOption}`,
-        sharedRideYesOrNo: `${taxiSelected.sharedRideYesOrNo}`,
       },
     });
 
