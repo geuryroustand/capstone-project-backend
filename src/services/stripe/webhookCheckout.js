@@ -46,6 +46,12 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
     if (sharedRideYesOrNo === "Yes") {
       const userFound = await userSchema.findOne({ email: customer_email });
 
+      console.log(userFound);
+
+      console.log("===================================");
+
+      console.log("event", event.data.object);
+      console.log("metadata", event.data.object.metadata);
       if (userFound) {
         await sharedRideSchema.create({
           user: userFound._id,
@@ -61,49 +67,49 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       }
     }
 
-    if (journey === "OneWay") {
-      const createOneWayBooking = await bookingSchema.create({
-        phoneNumber,
-        arrivalAirlineName,
-        arrivalFlightNumber,
-        arrivalDepartureAirport,
-        arrivalDate,
-        journey,
-        sharedRideYesOrNo,
-        passengers,
-        taxiOption,
-        totalPrice: amount_total / 100,
-        email: customer_email,
-        passengersName: name,
-        passengersSurname: surname,
-      });
+    // if (journey === "OneWay") {
+    //   const createOneWayBooking = await bookingSchema.create({
+    //     phoneNumber,
+    //     arrivalAirlineName,
+    //     arrivalFlightNumber,
+    //     arrivalDepartureAirport,
+    //     arrivalDate,
+    //     journey,
+    //     sharedRideYesOrNo,
+    //     passengers,
+    //     taxiOption,
+    //     totalPrice: amount_total / 100,
+    //     email: customer_email,
+    //     passengersName: name,
+    //     passengersSurname: surname,
+    //   });
 
-      res.status(200).send({ received: true });
-    } else {
-      const createBooking = await bookingSchema.create({
-        phoneNumber,
-        arrivalAirlineName,
-        arrivalFlightNumber,
-        arrivalDepartureAirport,
-        arrivalDate,
+    //   res.status(200).send({ received: true });
+    // } else {
+    //   const createBooking = await bookingSchema.create({
+    //     phoneNumber,
+    //     arrivalAirlineName,
+    //     arrivalFlightNumber,
+    //     arrivalDepartureAirport,
+    //     arrivalDate,
 
-        departureAirlineName,
-        departureFlightNumber,
-        departureDepartureAirport,
-        departureDate,
+    //     departureAirlineName,
+    //     departureFlightNumber,
+    //     departureDepartureAirport,
+    //     departureDate,
 
-        journey,
-        passengers,
-        taxiOption,
+    //     journey,
+    //     passengers,
+    //     taxiOption,
 
-        totalPrice: amount_total / 100,
-        email: customer_email,
-        passengersName: name,
-        passengersSurname: surname,
-      });
+    //     totalPrice: amount_total / 100,
+    //     email: customer_email,
+    //     passengersName: name,
+    //     passengersSurname: surname,
+    //   });
 
-      res.status(200).send();
-    }
+    //   res.status(200).send();
+    // }
   }
 });
 
