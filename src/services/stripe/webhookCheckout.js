@@ -115,7 +115,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             // haveFlight:
           });
 
-          // CREATE BOOKING FOR ROUNDTRIP
+          // CREATE BOOKING
           await bookingSchema.create({
             pickLocation,
             dropLocation,
@@ -139,6 +139,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             name,
             surname,
             phoneNumber,
+            sharedRideYesOrNo,
           });
 
           res.status(200).send({ received: true });
@@ -174,6 +175,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             arrivalFlightNumber,
             arrivalDepartureAirport,
             arrivalDate,
+
             journey,
             sharedRideYesOrNo,
             passengers,
@@ -183,7 +185,6 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             name,
             surname,
             phoneNumber,
-            wantToSharedRide,
           });
 
           res.status(200).send({ received: true });
@@ -240,6 +241,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             name,
             surname,
             phoneNumber,
+            sharedRideYesOrNo,
           });
 
           res.status(200).send({ received: true });
@@ -258,7 +260,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           arrivalDepartureAirport,
           arrivalDate,
           journey,
-          sharedRideYesOrNo,
+
           passengers,
           taxiOption,
           totalPrice: amount_total / 100,
@@ -266,6 +268,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           name,
           surname,
           phoneNumber,
+          sharedRideYesOrNo,
         });
 
         res.status(200).send({ received: true });
@@ -292,6 +295,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           name,
           surname,
           phoneNumber,
+          sharedRideYesOrNo,
         });
 
         res.status(200).send({ received: true });
