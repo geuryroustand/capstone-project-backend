@@ -67,8 +67,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           });
 
           // CREATE BOOKING FOR ONEWAY
-
-          const createOneWayBooking = await bookingSchema.create({
+          await bookingSchema.create({
             pickLocation,
             dropLocation,
             arrivalAirlineName,
@@ -117,8 +116,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           });
 
           // CREATE BOOKING FOR ROUNDTRIP
-
-          const createBooking = await bookingSchema.create({
+          await bookingSchema.create({
             pickLocation,
             dropLocation,
 
@@ -168,7 +166,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
           // CREATE BOOKING FOR ONEWAY
 
-          const createOneWayBooking = await bookingSchema.create({
+          await bookingSchema.create({
             pickLocation,
             dropLocation,
             arrivalAirlineName,
@@ -191,7 +189,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
         } else {
           //+++++++++++++++++ ARRIVAL SHARE RIDE POST
           await sharedRideSchema.create({
-            user: userFound._id,
+            user: createUser._id,
             pickLocation,
             dropLocation,
             serviceDate: arrivalDate,
@@ -204,7 +202,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
           //+++++++++++++++++ RETURN SHARE RIDE POST
           await sharedRideSchema.create({
-            user: userFound._id,
+            user: createUser._id,
             pickLocation,
             dropLocation,
 
@@ -219,7 +217,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
           // CREATE BOOKING FOR ROUNDTRIP
 
-          const createBooking = await bookingSchema.create({
+          await bookingSchema.create({
             pickLocation,
             dropLocation,
             arrivalAirlineName,
@@ -250,7 +248,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       // USER PRIVATE RIDE
 
       if (journey === "OneWay") {
-        const createOneWayBooking = await bookingSchema.create({
+        await bookingSchema.create({
           pickLocation,
           dropLocation,
 
@@ -271,7 +269,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
         res.status(200).send({ received: true });
       } else {
-        const createBooking = await bookingSchema.create({
+        await bookingSchema.create({
           pickLocation,
           dropLocation,
           arrivalAirlineName,
