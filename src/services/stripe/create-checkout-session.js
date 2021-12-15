@@ -38,7 +38,7 @@ createCheckoutSessionRouter.post("/", async (req, res, next) => {
         surname: `${taxiSelected.surname}`,
         phoneNumber: `${taxiSelected.phoneNumber}`,
         sharedRideYesOrNo: `${taxiSelected.sharedRideYesOrNo}`,
-        pickUpLocation: `${taxiSelected.pickUpLocation}`,
+        pickLocation: `${taxiSelected.pickUpLocation}`,
         dropLocation: `${taxiSelected.dropLocation}`,
         arrivalAirlineName: `${taxiSelected.arrivalAirlineName}`,
         arrivalFlightNumber: `${taxiSelected.arrivalFlightNumber}`,

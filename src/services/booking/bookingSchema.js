@@ -4,10 +4,29 @@ const { model, Schema } = mongoose;
 
 const bookingSchema = new Schema(
   {
+    name: {
+      type: String,
+    },
+
+    surname: {
+      type: String,
+    },
+
+    email: {
+      type: String,
+    },
+
+    phoneNumber: {
+      type: String,
+    },
+
     user: {
       type: String,
     },
 
+    pickLocation: {
+      type: String,
+    },
     arrivalAirlineName: {
       type: String,
     },
@@ -21,6 +40,9 @@ const bookingSchema = new Schema(
       type: String,
     },
 
+    dropLocation: {
+      type: String,
+    },
     departureAirlineName: {
       type: String,
     },
@@ -37,6 +59,9 @@ const bookingSchema = new Schema(
     },
 
     journey: {
+      type: String,
+    },
+    wantToSharedRide: {
       type: String,
     },
     passengers: {

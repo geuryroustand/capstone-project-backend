@@ -32,7 +32,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
       arrivalFlightNumber,
       arrivalDepartureAirport,
       arrivalDate,
-      pickUpLocation,
+      pickLocation,
       dropLocation,
 
       departureAirlineName,
@@ -56,7 +56,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ ARRIVAL SHARE RIDE POST ONE WAY
           await sharedRideSchema.create({
             user: userFound._id,
-            pickUpLocation,
+            pickLocation,
             dropLocation,
             serviceDate: arrivalDate,
             airlineName: arrivalAirlineName,
@@ -69,7 +69,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           // CREATE BOOKING FOR ONEWAY
 
           const createOneWayBooking = await bookingSchema.create({
-            phoneNumber,
+            pickLocation,
+            dropLocation,
             arrivalAirlineName,
             arrivalFlightNumber,
             arrivalDepartureAirport,
@@ -80,8 +81,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             taxiOption,
             totalPrice: amount_total / 100,
             email: customer_email,
-            passengersName: name,
-            passengersSurname: surname,
+            name,
+            surname,
+            phoneNumber,
           });
 
           res.status(200).send({ received: true });
@@ -89,7 +91,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ ARRIVAL SHARE RIDE POST
           await sharedRideSchema.create({
             user: userFound._id,
-            pickUpLocation,
+            pickLocation,
             dropLocation,
             serviceDate: arrivalDate,
             airlineName: arrivalAirlineName,
@@ -102,7 +104,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ RETURN SHARE RIDE POST
           await sharedRideSchema.create({
             user: userFound._id,
-            pickUpLocation,
+            pickLocation,
             dropLocation,
 
             airlineName: departureAirlineName,
@@ -117,7 +119,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           // CREATE BOOKING FOR ROUNDTRIP
 
           const createBooking = await bookingSchema.create({
-            phoneNumber,
+            pickLocation,
+            dropLocation,
+
             arrivalAirlineName,
             arrivalFlightNumber,
             arrivalDepartureAirport,
@@ -134,8 +138,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
             totalPrice: amount_total / 100,
             email: customer_email,
-            passengersName: name,
-            passengersSurname: surname,
+            name,
+            surname,
+            phoneNumber,
           });
 
           res.status(200).send({ received: true });
@@ -151,7 +156,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ ARRIVAL SHARE RIDE POST ONE WAY
           await sharedRideSchema.create({
             user: createUser._id,
-            pickUpLocation,
+            pickLocation,
             dropLocation,
             serviceDate: arrivalDate,
             airlineName: arrivalAirlineName,
@@ -164,7 +169,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           // CREATE BOOKING FOR ONEWAY
 
           const createOneWayBooking = await bookingSchema.create({
-            phoneNumber,
+            pickLocation,
+            dropLocation,
             arrivalAirlineName,
             arrivalFlightNumber,
             arrivalDepartureAirport,
@@ -175,8 +181,10 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             taxiOption,
             totalPrice: amount_total / 100,
             email: customer_email,
-            passengersName: name,
-            passengersSurname: surname,
+            name,
+            surname,
+            phoneNumber,
+            wantToSharedRide,
           });
 
           res.status(200).send({ received: true });
@@ -184,7 +192,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ ARRIVAL SHARE RIDE POST
           await sharedRideSchema.create({
             user: userFound._id,
-            pickUpLocation,
+            pickLocation,
             dropLocation,
             serviceDate: arrivalDate,
             airlineName: arrivalAirlineName,
@@ -197,7 +205,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ RETURN SHARE RIDE POST
           await sharedRideSchema.create({
             user: userFound._id,
-            pickUpLocation,
+            pickLocation,
             dropLocation,
 
             airlineName: departureAirlineName,
@@ -212,7 +220,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           // CREATE BOOKING FOR ROUNDTRIP
 
           const createBooking = await bookingSchema.create({
-            phoneNumber,
+            pickLocation,
+            dropLocation,
             arrivalAirlineName,
             arrivalFlightNumber,
             arrivalDepartureAirport,
@@ -229,8 +238,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
             totalPrice: amount_total / 100,
             email: customer_email,
-            passengersName: name,
-            passengersSurname: surname,
+            name,
+            surname,
+            phoneNumber,
           });
 
           res.status(200).send({ received: true });
@@ -241,7 +251,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
       if (journey === "OneWay") {
         const createOneWayBooking = await bookingSchema.create({
-          phoneNumber,
+          pickLocation,
+          dropLocation,
+
           arrivalAirlineName,
           arrivalFlightNumber,
           arrivalDepartureAirport,
@@ -252,14 +264,16 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           taxiOption,
           totalPrice: amount_total / 100,
           email: customer_email,
-          passengersName: name,
-          passengersSurname: surname,
+          name,
+          surname,
+          phoneNumber,
         });
 
         res.status(200).send({ received: true });
       } else {
         const createBooking = await bookingSchema.create({
-          phoneNumber,
+          pickLocation,
+          dropLocation,
           arrivalAirlineName,
           arrivalFlightNumber,
           arrivalDepartureAirport,
@@ -276,8 +290,9 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
           totalPrice: amount_total / 100,
           email: customer_email,
-          passengersName: name,
-          passengersSurname: surname,
+          name,
+          surname,
+          phoneNumber,
         });
 
         res.status(200).send({ received: true });
