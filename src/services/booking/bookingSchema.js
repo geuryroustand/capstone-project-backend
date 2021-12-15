@@ -61,7 +61,7 @@ const bookingSchema = new Schema(
     journey: {
       type: String,
     },
-    wantToSharedRide: {
+    wantTheSharedRide: {
       type: String,
     },
     passengers: {
