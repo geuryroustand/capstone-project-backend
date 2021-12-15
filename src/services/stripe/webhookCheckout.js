@@ -103,8 +103,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ RETURN SHARE RIDE POST
           await sharedRideSchema.create({
             user: userFound._id,
-            pickLocation,
-            dropLocation,
+            pickLocation: dropLocation,
+            dropLocation: pickLocation,
 
             airlineName: departureAirlineName,
             flightNumber: departureFlightNumber,
@@ -205,8 +205,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
           //+++++++++++++++++ RETURN SHARE RIDE POST
           await sharedRideSchema.create({
             user: createUser._id,
-            pickLocation,
-            dropLocation,
+            pickLocation: dropLocation,
+            dropLocation: pickLocation,
 
             airlineName: departureAirlineName,
             flightNumber: departureFlightNumber,
