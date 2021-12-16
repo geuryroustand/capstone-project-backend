@@ -233,15 +233,7 @@ export const data = [
     location_type: "2",
     fld_added_on: "2017-08-22",
   },
-  {
-    fld_id: "32",
-    fld_location: "Samana (GBP Cayacoa, GBP Cayo Levantado, etc.)",
-    title_de: null,
-    title_ru: null,
-    title_com_do: null,
-    location_type: "2",
-    fld_added_on: "2014-06-24",
-  },
+
   {
     fld_id: "33",
     fld_location: "Samana (Las Galeras)",

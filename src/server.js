@@ -88,10 +88,13 @@ server.listen(port, async () => {
 
     // data.forEach((lo) => {
     //   // submitLocation.push({ location: lo.fld_location });
-    //   locationSchema.insertMany([{ location: lo.fld_location }], (err) => {
-    //     if (err) return console.error(err);
-    //     console.log("SUCCESS");
-    //   });
+    //   locationSchema.insertMany(
+    //     [{ location: lo.fld_location.trim() }],
+    //     (err) => {
+    //       if (err) return console.error(err);
+    //       console.log("SUCCESS");
+    //     }
+    //   );
     // });
 
     // locationSchema.insertMany(submitLocation, (err) => {
