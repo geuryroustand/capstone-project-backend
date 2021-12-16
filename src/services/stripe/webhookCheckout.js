@@ -63,8 +63,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             flightNumber: arrivalFlightNumber,
             passenger: passengers,
             totalPrice: amount_total / 100,
-            travelerCommentRequest:
-              "Hi there! This transfer service is provide by vacationsTaxi.com",
+            // travelerCommentRequest:
+            //   "Hi there! This transfer service is provide by vacationsTaxi.com",
             // haveFlight:
           });
 
