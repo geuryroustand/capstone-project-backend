@@ -49,7 +49,7 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
     if (sharedRideYesOrNo === "Yes") {
       // SEARCH FOR THE USER
 
-      const userFound = await userSchema.findById("61bbc4b097b15b17574ce11e");
+      const userFound = await userSchema.findById("61bbd2dfbcef816b148e8c3b");
 
       if (userFound) {
         if (journey === "OneWay") {
@@ -63,8 +63,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             flightNumber: arrivalFlightNumber,
             passenger: passengers,
             totalPrice: amount_total / 100,
-            // travelerCommentRequest:
-            //   "Hi there! This transfer service is provide by vacationsTaxi.com",
+            travelerCommentRequest:
+              "Hi there! This transfer service is provide by vacationsTaxi.com",
             // haveFlight:
           });
 
@@ -99,8 +99,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
             flightNumber: arrivalFlightNumber,
             passenger: passengers,
             totalPrice: amount_total / 100,
-            // travelerCommentRequest:
-            //   "Hi there! This transfer service is provide by vacationsTaxi.com",
+            travelerCommentRequest:
+              "Hi there! This transfer service is provide by vacationsTaxi.com",
             // haveFlight:
           });
 
@@ -116,8 +116,8 @@ webHooCheckoutRouter.post("/", async (req, res, next) => {
 
             passenger: passengers,
             totalPrice: amount_total / 100,
-            // travelerCommentRequest:
-            //   "Hi there! This transfer service is provide by vacationsTaxi.com",
+            travelerCommentRequest:
+              "Hi there! This transfer service is provide by vacationsTaxi.com",
             // haveFlight:
           });
 
