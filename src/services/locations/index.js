@@ -58,10 +58,10 @@ locationsRouter.post("/", async (req, res, next) => {
   }
 });
 
-locationsRouter.get("/search", async (req, res, next) => {
+locationsRouter.post("/search", async (req, res, next) => {
   try {
     let searchedLocations = await req.body.location;
-
+    console.log(searchedLocations);
     if (!searchedLocations) {
       return next(createHttpError(404));
     }
