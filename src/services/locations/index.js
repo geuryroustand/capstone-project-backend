@@ -58,12 +58,12 @@ locationsRouter.post("/", async (req, res, next) => {
   }
 });
 
-locationsRouter.post("/search", async (req, res, next) => {
+locationsRouter.get("/search", async (req, res, next) => {
   try {
     let searchedLocations = await req.body.location;
 
     if (!searchedLocations) {
-      return next(createHttpError("req body cannot be empty"));
+      return next(createHttpError(404));
     }
     let findLocation = await locationSchema
       .find({
@@ -73,10 +73,6 @@ locationsRouter.post("/search", async (req, res, next) => {
       .exec();
 
     res.status(200).send(findLocation);
-
-    // const createNewLocation = await locationSchema.create(req.body);
-
-    // const { _id } = createNewLocation;
   } catch (error) {
     next(error);
   }
