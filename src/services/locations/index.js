@@ -22,30 +22,6 @@ locationsRouter.get("/", async (req, res, next) => {
   }
 });
 
-// locationsRouter.post("/", async (req, res, next) => {
-//   try {
-//     let payload = req.body.payload.trim();
-
-//     const query = q2m(req.query);
-//     const query1 = req.query;
-//     console.log(query1);
-//     const getLocations = await locationSchema
-//       // new RegExp("/^" + query + "/", "i")
-//       // { location: { $regex: new RegExp("^" + query + ".*", "i") } }
-//       .find({ location: { $regex: new RegExp("^" + payload + ".*", "i") } })
-//       .exec();
-
-//     // .limit(query.options.limit)
-//     // .skip(query.options.skip)
-//     // .sort(query.options.sort);
-//     // .populate("locationsPrices");
-
-//     res.send(getLocations);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-
 locationsRouter.post("/", async (req, res, next) => {
   try {
     const createNewLocation = await locationSchema.create(req.body);
@@ -61,9 +37,9 @@ locationsRouter.post("/", async (req, res, next) => {
 locationsRouter.post("/search", async (req, res, next) => {
   try {
     let searchedLocations = await req.body.location;
-    console.log(searchedLocations);
+
     if (!searchedLocations) {
-      return next(createHttpError(404));
+      return next(createHttpError(404, "Please provide a location"));
     }
     let findLocation = await locationSchema
       .find({
@@ -71,6 +47,9 @@ locationsRouter.post("/search", async (req, res, next) => {
       })
       .limit(6)
       .exec();
+
+    if (findLocation.length === 0)
+      return next(createHttpError(404, "Oh Oh, We did not find that location"));
 
     res.status(200).send(findLocation);
   } catch (error) {

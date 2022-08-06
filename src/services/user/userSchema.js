@@ -1,22 +1,29 @@
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
+import createHttpError from "http-errors";
 
 const { model, Schema } = mongoose;
 
 const userSchema = new Schema(
   {
-    name: {
+    firstName: {
       type: String,
-      required: [true, "User name is required"],
+
+      // required: [true, "First Name is required"],
     },
-    surname: {
+    lastName: {
       type: String,
-      required: [true, " Surname is required"],
+      // required: [true, "Last Name is required"],
+    },
+
+    isLogin: {
+      type: Boolean,
+      default: false,
     },
 
     email: {
       type: String,
-      required: [true, "Email is required"],
+      // required: [true, "Email is required"],
       unique: true,
     },
     password: {
@@ -72,6 +79,7 @@ userSchema.pre("save", async function (next) {
 
 userSchema.statics.checkCredentials = async function (email, password) {
   const user = await this.findOne({ email });
+
   if (await bcrypt.compare(password, user.password)) {
     return user;
   } else {

@@ -15,7 +15,15 @@ import bookingRouter from "./services/booking/index.js";
 import webHooCheckoutRouter from "./services/stripe/webhookCheckout.js";
 import createCheckoutSessionRouter from "./services/stripe/create-checkout-session.js";
 import sharedRideRouter from "./services/sharedRide/index.js";
-import usersRouter from "./services/user/index.js";
+import {
+  usersRouterFacebookLogin,
+  usersRouterFacebookRedirect,
+  usersRouterGoogleLogin,
+  usersRouterGoogleRedirect,
+  usersRouterLogin,
+  usersRouterProfile,
+  usersRouterRegister,
+} from "./services/user/index.js";
 import passport from "passport";
 import googleStrategy from "./services/auth/googleOauth.js";
 import facebookStrategy from "./services/auth/facebookOauth.js";
@@ -58,7 +66,16 @@ server.use("/bookings", bookingRouter);
 server.use("/shared-ride", sharedRideRouter);
 server.use("/comments", commentsRouter);
 server.use("/create-checkout-session", createCheckoutSessionRouter);
-server.use("/users", usersRouter);
+
+server.use("/register", usersRouterRegister);
+server.use("/login", usersRouterLogin);
+server.use("/me", usersRouterProfile);
+
+server.use("/googleLogin", usersRouterGoogleLogin);
+server.use("/googleRedirect", usersRouterGoogleRedirect);
+server.use("/facebookLogin", usersRouterFacebookLogin);
+server.use("/facebookRedirect", usersRouterFacebookRedirect);
+
 passport.use("google", googleStrategy);
 passport.use("facebook", facebookStrategy);
 

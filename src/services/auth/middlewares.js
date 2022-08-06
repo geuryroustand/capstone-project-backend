@@ -7,7 +7,7 @@ export const JWTAuthMiddleware = async (req, res, next) => {
   if (!req.headers.authorization) {
     next(
       createError(
-        401,
+        403,
         "Please provide credentials in the Authorization header!"
       )
     );
@@ -24,7 +24,7 @@ export const JWTAuthMiddleware = async (req, res, next) => {
         next(createError(404, "User not found!"));
       }
     } catch (error) {
-      next(createError(401, "Token Expired!"));
+      next(createError(403, "Token Expired!"));
     }
   }
 };
