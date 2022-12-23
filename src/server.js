@@ -27,9 +27,10 @@ import {
 import passport from "passport";
 import googleStrategy from "./services/auth/googleOauth.js";
 import facebookStrategy from "./services/auth/facebookOauth.js";
-import { data } from "../data.js";
-import locationSchema from "./services/locations/locationSchema.js";
+import { data, data1 } from "../data.js";
+
 import commentsRouter from "./services/comments/index.js";
+import seoLocationsRouter from "./services/seoLocations/index.js";
 const server = express();
 
 const port = process.env.PORT;
@@ -61,6 +62,8 @@ server.use(passport.initialize());
 // server.use(passport.session());
 
 //************************ROUTERS**************************
+
+server.use("/seoLocations", seoLocationsRouter);
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
 server.use("/bookings", bookingRouter);
 server.use("/shared-ride", sharedRideRouter);
@@ -101,17 +104,29 @@ server.listen(port, async () => {
     console.table(listEndpoints(server));
     console.log("😊Successfully connected to mongo!🥰 😎" + port);
 
-    let submitLocation = [];
+    // let submitLocation = [];
+    // let submitLocation1 = [];
+
+    // data1.forEach((da) => {
+    //   submitLocation1.push(da.location.trim());
+    // });
+
+    // console.log(submitLocation1.length);
 
     // data.forEach((lo) => {
     //   // submitLocation.push({ location: lo.fld_location });
-    //   locationSchema.insertMany(
-    //     [{ location: lo.fld_location.trim() }],
-    //     (err) => {
-    //       if (err) return console.error(err);
-    //       console.log("SUCCESS");
+
+    //   if (lo.location_type === "15") {
+    //     if (lo.fld_location.trim() !== submitLocation1) {
+    //       locationSchema.insertMany(
+    //         [{ location: lo.fld_location.trim(), region: "puertoPlataB" }],
+    //         (err) => {
+    //           if (err) return console.error(err);
+    //           console.log("SUCCESS");
+    //         }
+    //       );
     //     }
-    //   );
+    //   }
     // });
 
     // locationSchema.insertMany(submitLocation, (err) => {

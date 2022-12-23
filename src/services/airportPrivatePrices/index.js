@@ -1,6 +1,7 @@
 import express from "express";
 import q2m from "query-to-mongo";
 import locationSchema from "../locations/locationSchema.js";
+import { getPrice } from "./getPrice.js";
 import privateTransfersSchema from "./privateTransfersSchema.js";
 
 const addPrivatePriceRouter = express.Router();
@@ -9,108 +10,124 @@ addPrivatePriceRouter.get("/addPrices", async (req, res, next) => {
   try {
     let query = q2m(req.query);
 
-    let { pickupPlace, dropPlace } = query.criteria;
-    // let payload = req.query.pickupPlace.trim();
-    // console.log(pickupPlace, dropPlace);
-
-    // .find({ location: { $regex: new RegExp("^" + payload + ".*", "i") } })
-    //   .exec()
-    // console.log(req.query.pickupPlace);
-    // ${req.query.pickupPlace}
-
-    const getPickupPlace = await locationSchema.find({
-      location: `${req.query.pickupPlace}`,
-    });
-
-    const getDropLocation = await locationSchema.find({
-      location: `${req.query.dropPlace}`,
-    });
-
-    // const findBoth = await privateTransfersSchema.find({
-    //   $and: [
-    //     { "pickupPlace.location": { $eq: getPickupPlace.location } },
-    //     { "dropPlace.location": { $eq: getDropLocation.location } },
-    //   ],
+    // const getPickupPlace = await locationSchema.find({
+    //   location: `${req.query.pickupPlace}`,
     // });
 
-    // const { _id } = getDropLocation.toString();
-    // console.log(getPickupPlace);
-    const drop = getDropLocation.find((drop) => drop);
-    const pick = getPickupPlace.find((pick) => pick);
+    const getPickupPlace = await locationSchema.findById(req.query.pickUp);
 
-    console.log("=============================================");
-
-    // console.log(drop.location);
-    // console.log(pick.location);
-    // const findBothT = await privateTransfersSchema.find({
-    //   " location.dropPlace": a.location,
+    // const getDropLocation = await locationSchema.find({
+    //   location: `${req.query.dropPlace}`,
     // });
 
-    // new RegExp(`^${req.query.pickupPlace}`, "i")
-    // console.log(getPickupPlace, getDropLocation);
+    const getDropLocation = await locationSchema.findById(req.query.dropOff);
+    const roundtrip = req.query.roundtrip;
 
-    // 1. Use the regular expression to search for locations with the LocationSchema
-    // 2. You will get some _ids
-    // 3. You need to use those ids to search into privateTransfer collection by "pickupPlace"
+    // console.log("getDropLocation", getDropLocation);
 
-    // {
-    //   "pickupPlace.location": {
-    //     $regex: new RegExp(`^${req.query.pickupPlace}`, "i"),
-    //   },
+    // const [searchedPickUpLocation] = getPickupPlace;
+    // const [searchedDropOffLocation] = getDropLocation;
+
+    const result = getPrice(getPickupPlace, getDropLocation, roundtrip, next);
+
+    res.send({
+      priceTaxi1: result,
+      priceTaxi2: result + 25.99,
+      priceTaxi3: result + 56.89,
+      priceTaxi4: result + 130.56,
+
+      pickUp: getPickupPlace.location,
+      dropOff: getDropLocation.location,
+    });
+
+    // console.log(searchedDropOffLocation);
+    // console.log(searchedPickUpLocation.region);
+    // console.log(searchedDropOffLocation.region);
+
+    // if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "samanaA") ||
+    //   (searchedPickUpLocation.region === "samanaA" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "199" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "samanaB") ||
+    //   (searchedPickUpLocation.region === "samanaB" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "239" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "puntaCanaA") ||
+    //   (searchedPickUpLocation.region === "puntaCanaA" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "155" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "puntaCanaB") ||
+    //   (searchedPickUpLocation.region === "puntaCanaB" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "155" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "laRomanaA") ||
+    //   (searchedPickUpLocation.region === "laRomanaA" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "89" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "laRomanaB") ||
+    //   (searchedPickUpLocation.region === "laRomanaB" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "89" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "santoDomingoA") ||
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "39" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "puertoPlataA") ||
+    //   (searchedPickUpLocation.region === "puertoPlataA" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "219" });
+    // } else if (
+    //   (searchedPickUpLocation.region === "santoDomingoA" &&
+    //     searchedDropOffLocation.region === "puertoPlataB") ||
+    //   (searchedPickUpLocation.region === "puertoPlataB" &&
+    //     searchedDropOffLocation.region === "santoDomingoA")
+    // ) {
+    //   res.send({ price: "240" });
     // }
 
-    const findBoth = await privateTransfersSchema
-      .find({
-        $and: [{ pickupPlace: { $eq: pick } }, { dropPlace: { $eq: drop } }],
-      })
-      .limit(query.options.limit)
-      .skip(query.options.skip)
-      .sort(query.options.sort)
-      .populate("pickupPlace")
-      .populate("dropPlace");
+    // const drop = getDropLocation.find((drop) => drop);
+    // const pick = getPickupPlace.find((pick) => pick);
 
-    res.send(findBoth);
+    // const findBoth = await privateTransfersSchema
+    //   .find({
+    //     $and: [{ pickupPlace: { $eq: pick } }, { dropPlace: { $eq: drop } }],
+    //   })
+    //   .limit(query.options.limit)
+    //   .skip(query.options.skip)
+    //   .sort(query.options.sort)
+    //   .populate("pickupPlace")
+    //   .populate("dropPlace");
+
+    // res.send(findBoth);
   } catch (error) {
     next(error);
   }
 });
 
-// addPrivatePriceRouter.get("/addPrices/:ValuePassed", async (req, res, next) => {
-//   try {
-//     const query = q2m(req.query);
-
-//     // console.log(req.params.ValuePassed);
-
-//     // let { pickupPlace, dropPlace } = query.criteria;
-
-//     // console.log(pickupPlace, dropPlace);
-
-//     // console.log(query);
-//     // .find({ location: { $regex: new RegExp("^" + payload + ".*", "i") } })
-//     //   .exec()
-
-//     const getBookingDetails = await privateTransfersSchema
-//       .findOneAndUpdate({ pickupPlace: req.params.ValuePassed.toString() })
-//       // .limit(query.options.limit)
-//       // .skip(query.options.skip)
-//       // .sort(query.options.sort)
-//       .populate("pickupPlace")
-//       .populate("dropPlace");
-
-//     res.send(getBookingDetails);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
-// addPrivatePriceRouter.get("/addPrices/:priceId", async (req, res, next) => {
-//   try {
-//     const addPrices = await privateTransfersSchema.findById(req.params.priceId);
-
-//     res.send(addPrices);
-//   } catch (error) {
-//     next(error);
-//   }
-// });
 addPrivatePriceRouter.post("/addPrices", async (req, res, next) => {
   try {
     const addPrices = await privateTransfersSchema.create(req.body);
