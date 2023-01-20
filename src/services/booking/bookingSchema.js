@@ -4,11 +4,11 @@ const { model, Schema } = mongoose;
 
 const bookingSchema = new Schema(
   {
-    name: {
+    firstName: {
       type: String,
     },
 
-    surname: {
+    lastName: {
       type: String,
     },
 
@@ -16,66 +16,68 @@ const bookingSchema = new Schema(
       type: String,
     },
 
-    phoneNumber: {
+    mobileNumber: {
       type: String,
     },
 
-    user: {
+    pickUp: {
+      type: String,
+    },
+    pickUpDate: {
+      type: String,
+    },
+    pickUpPassenger: {
+      type: String,
+    },
+    pickUpReturn: {
       type: String,
     },
 
-    pickLocation: {
+    pickUpTime: {
       type: String,
     },
+
     arrivalAirlineName: {
       type: String,
     },
+
     arrivalFlightNumber: {
       type: String,
     },
-    arrivalDepartureAirport: {
+
+    dropOff: {
       type: String,
     },
-    arrivalDate: {
+    dropOffDate: {
       type: String,
     },
 
-    dropLocation: {
+    dropOffPassenger: {
+      type: String,
+    },
+    dropOffReturn: {
+      type: String,
+    },
+    dropOffTime: {
       type: String,
     },
     departureAirlineName: {
       type: String,
     },
-
     departureFlightNumber: {
       type: String,
     },
-
-    departureDepartureAirport: {
+    requests: {
       type: String,
     },
-    departureDate: {
+    roundtrip: {
       type: String,
     },
-
-    journey: {
-      type: String,
-    },
-    sharedRideYesOrNo: {
-      type: String,
-    },
-    passengers: {
-      type: Number,
-    },
-    taxiOption: {
-      type: String,
-    },
-
-    specialRequest: {
+    paymentMethod: {
       type: String,
     },
     totalPrice: {
-      type: Number,
+      type: String,
     },
   },
   { timestamps: true }

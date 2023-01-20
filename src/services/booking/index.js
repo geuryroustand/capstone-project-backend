@@ -24,15 +24,16 @@ bookingRouter.post("/", async (req, res, next) => {
     //   departureDate: req.query.departureDate,
     //   passengers: req.query.passengers,
     // });
-
-    const createNewBooking = await bookingSchema.create({
-      ...req.body,
-      pickupPlace: req.query.pickupPlace,
-      dropPlace: req.query.dropPlace,
-      arrivalDate: req.query.arrivalDate,
-      departureDate: req.query.departureDate,
-      passengers: req.query.passengers,
-    });
+    {
+      // req.body
+      // pickupPlace: req.query.pickupPlace,
+      // dropPlace: req.query.dropPlace,
+      // arrivalDate: req.query.arrivalDate,
+      // departureDate: req.query.departureDate,
+      // passengers: req.query.passengers,
+    }
+    console.log(req.body);
+    const createNewBooking = await bookingSchema.create(req.body);
 
     const { _id } = createNewBooking;
 
