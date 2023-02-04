@@ -27,7 +27,7 @@ import {
 import passport from "passport";
 import googleStrategy from "./services/auth/googleOauth.js";
 import facebookStrategy from "./services/auth/facebookOauth.js";
-import { data, data1 } from "../data.js";
+import { data, data1, data2 } from "../data.js";
 
 import commentsRouter from "./services/comments/index.js";
 import seoLocationsRouter from "./services/seoLocations/index.js";
@@ -107,26 +107,39 @@ server.listen(port, async () => {
     // let submitLocation = [];
     // let submitLocation1 = [];
 
-    // data1.forEach((da) => {
-    //   submitLocation1.push(da.location.trim());
+    // data2.forEach((da) => {
+    //   submitLocation1.push(da.location?.trim());
     // });
 
-    // console.log(submitLocation1.length);
+    // const myData = data.filter((lo) => !submitLocation1.includes(lo.fld_location.trim()));
 
-    // data.forEach((lo) => {
+    // console.log(myData);
+    // data.filter((lo) => {
     //   // submitLocation.push({ location: lo.fld_location });
-
-    //   if (lo.location_type === "15") {
-    //     if (lo.fld_location.trim() !== submitLocation1) {
-    //       locationSchema.insertMany(
-    //         [{ location: lo.fld_location.trim(), region: "puertoPlataB" }],
-    //         (err) => {
-    //           if (err) return console.error(err);
-    //           console.log("SUCCESS");
-    //         }
-    //       );
-    //     }
-    //   }
+    //   // submitLocation1.forEach((l) => {
+    //   //   console.log(lo.fld_location.trim() === l);
+    //   //   // if (lo.fld_location.trim() !== l.location) {
+    //   //   //   // submitLocation.push(lo.fld_location.trim());
+    //   //   //   // locationSchema.insertMany(
+    //   //   //   //   [{ location: lo.fld_location.trim() }],
+    //   //   //   //   (err) => {
+    //   //   //   //     if (err) return console.error(err);
+    //   //   //   //     console.log("SUCCESS");
+    //   //   //   //   }
+    //   //   //   // );
+    //   //   // }
+    //   // });
+    //   // if (lo.location_type === "15") {
+    //   //   if (lo.fld_location.trim() !== submitLocation1) {
+    //   //     locationSchema.insertMany(
+    //   //       [{ location: lo.fld_location.trim(), region: "puertoPlataB" }],
+    //   //       (err) => {
+    //   //         if (err) return console.error(err);
+    //   //         console.log("SUCCESS");
+    //   //       }
+    //   //     );
+    //   //   }
+    //   // }
     // });
 
     // locationSchema.insertMany(submitLocation, (err) => {
