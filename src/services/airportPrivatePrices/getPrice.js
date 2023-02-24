@@ -66,7 +66,7 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
         ["puntaCanaB", 329],
         ["puertoPlataA", 199],
         ["puertoPlataB", 209],
-        ["santoDomingoA", 219],
+        ["santoDomingoA", 199],
       ],
     ],
     [
@@ -145,7 +145,6 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
 
     // Add entries for the rest of the regions
   ]);
-
   const code = `${pickUp._id}&${dropOff._id}`;
 
   const price = regions
