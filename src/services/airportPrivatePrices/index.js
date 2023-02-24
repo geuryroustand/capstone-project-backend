@@ -32,9 +32,9 @@ addPrivatePriceRouter.get("/addPrices", async (req, res, next) => {
 
     res.send({
       priceTaxi1: result,
-      priceTaxi2: result + 25.99,
-      priceTaxi3: result + 56.89,
-      priceTaxi4: result + 130.56,
+      priceTaxi2: result + 15.99,
+      priceTaxi3: result + 20.99,
+      priceTaxi4: result + 65.56,
 
       pickUp: getPickupPlace.location,
       dropOff: getDropLocation.location,
