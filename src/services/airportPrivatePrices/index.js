@@ -21,6 +21,7 @@ addPrivatePriceRouter.get("/addPrices", async (req, res, next) => {
     // });
 
     const getDropLocation = await locationSchema.findById(req.query.dropOff);
+
     const roundtrip = req.query.roundtrip;
 
     // console.log("getDropLocation", getDropLocation);
@@ -29,7 +30,8 @@ addPrivatePriceRouter.get("/addPrices", async (req, res, next) => {
     // const [searchedDropOffLocation] = getDropLocation;
 
     const result = getPrice(getPickupPlace, getDropLocation, roundtrip, next);
-
+    console.log(roundtrip);
+    console.log(req.query);
     res.send({
       priceTaxi1: result,
       priceTaxi2: result + 15.99,

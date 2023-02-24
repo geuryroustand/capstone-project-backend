@@ -159,7 +159,7 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
       )
     );
 
-  return roundtrip ? price * 2 : price;
+  return roundtrip === "false" ? price : price * 2;
 };
 
 // export const getPrice = (pickUp, dropOff, roundtrip, next) => {
