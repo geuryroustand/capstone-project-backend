@@ -31,6 +31,8 @@ import { data, data1, data2 } from "../data.js";
 
 import commentsRouter from "./services/comments/index.js";
 import seoLocationsRouter from "./services/seoLocations/index.js";
+import contactUsRouter from "./services/contactUs/index.js";
+
 const server = express();
 
 const port = process.env.PORT;
@@ -64,6 +66,7 @@ server.use(passport.initialize());
 //************************ROUTERS**************************
 
 server.use("/seoLocations", seoLocationsRouter);
+server.use("/contact-us", contactUsRouter);
 server.use("/locations", locationsRouter, addPrivatePriceRouter);
 server.use("/bookings", bookingRouter);
 server.use("/shared-ride", sharedRideRouter);
