@@ -46,15 +46,15 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
     [
       "santoDomingoA",
       [
-        ["samanaA", 199],
-        ["samanaB", 219],
-        ["puntaCanaA", 189],
-        ["puntaCanaB", 199],
+        ["samanaA", 189],
+        ["samanaB", 214],
+        ["puntaCanaA", 156],
+        ["puntaCanaB", 179],
         ["laRomanaA", 99],
         ["laRomanaB", 89],
         ["santoDomingoA", 49],
-        ["puertoPlataA", 239],
-        ["puertoPlataB", 249],
+        ["puertoPlataA", 219],
+        ["puertoPlataB", 239],
       ],
     ],
     [
@@ -64,9 +64,9 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
         ["samanaB", 89],
         ["puntaCanaA", 329],
         ["puntaCanaB", 329],
-        ["puertoPlataA", 199],
+        ["puertoPlataA", 189],
         ["puertoPlataB", 209],
-        ["santoDomingoA", 199],
+        ["santoDomingoA", 189],
       ],
     ],
     [
@@ -84,8 +84,8 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
     [
       "puntaCanaA",
       [
-        ["puntaCanaA", 49],
-        ["puntaCanaB", 79],
+        ["puntaCanaA", 36],
+        ["puntaCanaB", 58],
 
         ["laRomanaA", 99],
         ["laRomanaB", 129],
@@ -105,13 +105,13 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
     [
       "puntaCanaB",
       [
-        ["puntaCanaB", 49],
-        ["puntaCanaA", 79],
+        ["puntaCanaB", 36],
+        ["puntaCanaA", 58],
 
         ["laRomanaA", 99],
         ["laRomanaB", 129],
 
-        ["santoDomingoA", 209],
+        ["santoDomingoA", 179],
 
         ["puertoPlataA", 369],
         ["puertoPlataB", 369],
@@ -159,7 +159,9 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
       )
     );
 
-  return roundtrip === "false" ? price : price * 2;
+  const totalDiscount = (5 / 100) * (price * 2);
+
+  return roundtrip === "false" ? price : price * 2 - totalDiscount;
 };
 
 // export const getPrice = (pickUp, dropOff, roundtrip, next) => {

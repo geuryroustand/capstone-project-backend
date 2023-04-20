@@ -30,13 +30,11 @@ addPrivatePriceRouter.get("/addPrices", async (req, res, next) => {
     // const [searchedDropOffLocation] = getDropLocation;
 
     const result = getPrice(getPickupPlace, getDropLocation, roundtrip, next);
-    console.log(roundtrip);
-    console.log(req.query);
     res.send({
       priceTaxi1: result,
-      priceTaxi2: result + 15.99,
-      priceTaxi3: result + 20.99,
-      priceTaxi4: result + 65.56,
+      priceTaxi2: result + 15,
+      priceTaxi3: result + 25,
+      priceTaxi4: result + 65,
 
       pickUp: getPickupPlace.location,
       dropOff: getDropLocation.location,
