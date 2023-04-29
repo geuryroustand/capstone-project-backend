@@ -35,17 +35,22 @@ bookingRouter.post("/", async (req, res, next) => {
       ? `
     <ul>
     <strong>Arrival Information</strong>
-    <li><strong>pickUp:</strong>${req.body.pickUp}</li>
+    <li><strong>pickUp:</strong> ${req.body.pickUp}</li>
     <li><strong>dropOff:</strong> ${req.body.dropOff}</li>
-    <li><strong>pickUpDate:</strong>${req.body.pickUpDate}</li>
-    <li><strong>arrivalTime:</strong>${req.body.pickUpTime}</li>
+    <li><strong>pickUpDate:</strong> ${req.body.pickUpDate}</li>
+    <li><strong>arrivalTime:</strong> ${req.body.pickUpTime}</li>
     <hr>
     <strong>Departure Information</strong>
-    <li><strong>pickUpReturn:</strong>${req.body.pickUpReturn}</li>
-    <li><strong>dropOffReturn:</strong>${req.body.dropOffReturn}</li>
-    <li><strong>departureDate:</strong>${req.body.dropOffDate}</li>
-    <li><strong>departureTime:</strong>${req.body.dropOffTime}</li>
+    <li><strong>pickUpReturn:</strong> ${req.body.pickUpReturn}</li>
+    <li><strong>dropOffReturn:</strong> ${req.body.dropOffReturn}</li>
+    <li><strong>departureDate:</strong> ${req.body.dropOffDate}</li>
+    <li><strong>departureTime:</strong> ${req.body.dropOffTime}</li>
+    <hr>
+    <strong>Payment Information</strong>
+    <li><strong>totalPrice:</strong> $USD ${req.body.totalPrice} $USD</li>
+    <li><strong>paymentMethod:</strong> ${req.body.paymentMethod}</li>
   </ul>
+
   <strong>Please note that we will send you the 
      return pick-up time 1 day before your departure.
   </strong>
@@ -53,10 +58,14 @@ bookingRouter.post("/", async (req, res, next) => {
       : `
     <ul>
     <strong>Arrival Information</strong>
-    <li><strong>pickUp:</strong>${req.body.pickUp}</li>
-    <li><strong>dropOff:</strong>${req.body.dropOff}</li>
-    <li><strong>pickUpDate:</strong>${req.body.pickUpDate}</li>
-    <li><strong>arrivalTime:</strong>${req.body.pickUpTime}</li>
+    <li><strong>pickUp:</strong> ${req.body.pickUp}</li>
+    <li><strong>dropOff:</strong> ${req.body.dropOff}</li>
+    <li><strong>pickUpDate:</strong> ${req.body.pickUpDate}</li>
+    <li><strong>arrivalTime:</strong> ${req.body.pickUpTime}</li>
+    <hr>
+    <strong>Payment Information</strong>
+    <li><strong>totalPrice:</strong> $USD ${req.body.totalPrice} </li>
+    <li><strong>paymentMethod:</strong> ${req.body.paymentMethod}</li>
     </ul>
     `;
 
@@ -74,10 +83,11 @@ bookingRouter.post("/", async (req, res, next) => {
     
       ${isRoundTripOrOneWay}
       
-  <p>A professional and experienced driver will be waiting for 
-    you at the airport with a sign displaying your name. Our
-    driver will assist with your luggage and transport you
-    directly to your hotel in comfort and style.</p>
+  <p>A professional and experienced driver will be waiting
+     for you at the airport or your pick-up location with a sign
+     displaying your name. Our driver will assist with your 
+     luggage and transport you directly to your hotel or 
+     drop-off location in comfort and style.</p>
 
   <p>Please let us know if there are any changes to your
      itinerary or if you have any special requests. We will do our
