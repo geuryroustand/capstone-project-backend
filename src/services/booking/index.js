@@ -47,7 +47,7 @@ bookingRouter.post("/", async (req, res, next) => {
     <li><strong>departureTime:</strong> ${req.body.dropOffTime}</li>
     <hr>
     <strong>Payment Information</strong>
-    <li><strong>totalPrice:</strong> $USD ${req.body.totalPrice} $USD</li>
+    <li><strong>totalPrice:</strong> $USD${req.body.totalPrice}</li>
     <li><strong>paymentMethod:</strong> ${req.body.paymentMethod}</li>
   </ul>
 
@@ -64,7 +64,7 @@ bookingRouter.post("/", async (req, res, next) => {
     <li><strong>arrivalTime:</strong> ${req.body.pickUpTime}</li>
     <hr>
     <strong>Payment Information</strong>
-    <li><strong>totalPrice:</strong> $USD ${req.body.totalPrice} </li>
+    <li><strong>totalPrice:</strong> $USD${req.body.totalPrice} </li>
     <li><strong>paymentMethod:</strong> ${req.body.paymentMethod}</li>
     </ul>
     `;
