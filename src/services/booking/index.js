@@ -35,20 +35,20 @@ bookingRouter.post("/", async (req, res, next) => {
       ? `
     <ul>
     <strong>Arrival Information</strong>
-    <li><strong>pickUp:</strong> ${req.body.pickUp}</li>
-    <li><strong>dropOff:</strong> ${req.body.dropOff}</li>
-    <li><strong>pickUpDate:</strong> ${req.body.pickUpDate}</li>
-    <li><strong>arrivalTime:</strong> ${req.body.pickUpTime}</li>
+    <li><strong>PickUp:</strong> ${req.body.pickUp}</li>
+    <li><strong>DropOff:</strong> ${req.body.dropOff}</li>
+    <li><strong>PickUp Date:</strong> ${req.body.pickUpDate}</li>
+    <li><strong>Arrival Time:</strong> ${req.body.pickUpTime}</li>
     <hr>
     <strong>Departure Information</strong>
-    <li><strong>pickUpReturn:</strong> ${req.body.pickUpReturn}</li>
-    <li><strong>dropOffReturn:</strong> ${req.body.dropOffReturn}</li>
-    <li><strong>departureDate:</strong> ${req.body.dropOffDate}</li>
-    <li><strong>departureTime:</strong> ${req.body.dropOffTime}</li>
+    <li><strong>PickUp Departure:</strong> ${req.body.pickUpReturn}</li>
+    <li><strong>DropOff Departure:</strong> ${req.body.dropOffReturn}</li>
+    <li><strong>Departure Date:</strong> ${req.body.dropOffDate}</li>
+    <li><strong>Departure Time:</strong> ${req.body.dropOffTime}</li>
     <hr>
     <strong>Payment Information</strong>
-    <li><strong>totalPrice:</strong> $USD${req.body.totalPrice}</li>
-    <li><strong>paymentMethod:</strong> ${req.body.paymentMethod}</li>
+    <li><strong>Total Price:</strong> $USD${req.body.totalPrice}</li>
+    <li><strong>Payment Method:</strong> ${req.body.paymentMethod}</li>
   </ul>
 
   <strong>Please note that we will send you the 
@@ -58,21 +58,21 @@ bookingRouter.post("/", async (req, res, next) => {
       : `
     <ul>
     <strong>Arrival Information</strong>
-    <li><strong>pickUp:</strong> ${req.body.pickUp}</li>
-    <li><strong>dropOff:</strong> ${req.body.dropOff}</li>
-    <li><strong>pickUpDate:</strong> ${req.body.pickUpDate}</li>
-    <li><strong>arrivalTime:</strong> ${req.body.pickUpTime}</li>
+    <li><strong>PickUp:</strong> ${req.body.pickUp}</li>
+    <li><strong>DropOff:</strong> ${req.body.dropOff}</li>
+    <li><strong>PickUp Date:</strong> ${req.body.pickUpDate}</li>
+    <li><strong>Arrival Time:</strong> ${req.body.pickUpTime}</li>
     <hr>
     <strong>Payment Information</strong>
-    <li><strong>totalPrice:</strong> $USD${req.body.totalPrice} </li>
-    <li><strong>paymentMethod:</strong> ${req.body.paymentMethod}</li>
+    <li><strong>Total Price:</strong> $USD${req.body.totalPrice} </li>
+    <li><strong>Payment Method:</strong> ${req.body.paymentMethod}</li>
     </ul>
     `;
 
     const msg = {
       to: `${req.body.email}`, // Change to your recipient
-      from: "vacationstaxis@gmail.com", // Change to your verified sender
-      cc: "roustandgeury@gmail.com",
+      from: "info@vacationstaxis.com", // Change to your verified sender
+      // cc: "roustandgeury@gmail.com",
       subject:
         "Confirmation of your Airport Transfer Service with vacationstaxis.com",
 
@@ -98,7 +98,6 @@ bookingRouter.post("/", async (req, res, next) => {
     a smooth and stress-free airport transfer experience.</p>
 
     <p>Thank you for choosing VacationsTaxis for your transportation needs.</p>
-    <p>Best regards,</p>
     <p>The Vacationstaxis.com Team</p>
       `,
     };

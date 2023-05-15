@@ -159,7 +159,7 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
       )
     );
 
-  const totalDiscount = (5 / 100) * (price * 2);
+  const totalDiscount = Math.floor(5 / 100) * (price * 2);
 
   return roundtrip === "false" ? price : price * 2 - totalDiscount;
 };
