@@ -72,7 +72,7 @@ bookingRouter.post("/", async (req, res, next) => {
     const msg = {
       to: `${req.body.email}`, // Change to your recipient
       from: "info@vacationstaxis.com", // Change to your verified sender
-      // cc: "roustandgeury@gmail.com",
+      cco: "vacationstaxis@gmail.com",
       subject:
         "Confirmation of your Airport Transfer Service with vacationstaxis.com",
 
