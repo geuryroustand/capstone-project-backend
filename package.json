@@ -17,24 +17,24 @@
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
-    "bcrypt": "^5.0.1",
-    "cloudinary": "^1.27.1",
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.37.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-list-endpoints": "^6.0.0",
-    "express-validator": "^6.14.0",
-    "http-errors": "^1.8.0",
+    "express-validator": "^7.0.1",
+    "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.10.5",
-    "multer": "^1.4.3",
+    "mongoose": "^7.2.0",
+    "multer": "^1.4.5-lts.1",
     "multer-storage-cloudinary": "^4.0.0",
     "passport": "^0.6.0",
     "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0",
-    "query-to-mongo": "^0.10.1",
-    "stripe": "^8.185.0"
+    "query-to-mongo": "^0.10.2",
+    "stripe": "^12.6.0"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^16.0.3"
   }
 }
