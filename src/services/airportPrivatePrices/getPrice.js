@@ -60,7 +60,7 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
     [
       "samanaA",
       [
-        ["samanaA", 89],
+        ["samanaA", 77],
         ["samanaB", 89],
         ["puntaCanaA", 329],
         ["puntaCanaB", 329],
