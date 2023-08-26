@@ -27,7 +27,6 @@ import {
 import passport from "passport";
 import googleStrategy from "./services/auth/googleOauth.js";
 import facebookStrategy from "./services/auth/facebookOauth.js";
-import { data, data1, data2 } from "../data.js";
 
 import commentsRouter from "./services/comments/index.js";
 import seoLocationsRouter from "./services/seoLocations/index.js";
@@ -107,47 +106,23 @@ server.listen(port, async () => {
     console.table(listEndpoints(server));
     console.log("😊Successfully connected to mongo!🥰 😎" + port);
 
-    // let submitLocation = [];
-    // let submitLocation1 = [];
+    // newLocation.filter((lo) => {
+    //   const { location, region } = lo;
 
-    // data2.forEach((da) => {
-    //   submitLocation1.push(da.location?.trim());
-    // });
+    //   console.log({
+    //     location,
+    //     region,
+    //   });
 
-    // const myData = data.filter((lo) => !submitLocation1.includes(lo.fld_location.trim()));
-
-    // console.log(myData);
-    // data.filter((lo) => {
-    //   // submitLocation.push({ location: lo.fld_location });
-    //   // submitLocation1.forEach((l) => {
-    //   //   console.log(lo.fld_location.trim() === l);
-    //   //   // if (lo.fld_location.trim() !== l.location) {
-    //   //   //   // submitLocation.push(lo.fld_location.trim());
-    //   //   //   // locationSchema.insertMany(
-    //   //   //   //   [{ location: lo.fld_location.trim() }],
-    //   //   //   //   (err) => {
-    //   //   //   //     if (err) return console.error(err);
-    //   //   //   //     console.log("SUCCESS");
-    //   //   //   //   }
-    //   //   //   // );
-    //   //   // }
-    //   // });
-    //   // if (lo.location_type === "15") {
-    //   //   if (lo.fld_location.trim() !== submitLocation1) {
-    //   //     locationSchema.insertMany(
-    //   //       [{ location: lo.fld_location.trim(), region: "puertoPlataB" }],
-    //   //       (err) => {
-    //   //         if (err) return console.error(err);
-    //   //         console.log("SUCCESS");
-    //   //       }
-    //   //     );
-    //   //   }
-    //   // }
-    // });
-
-    // locationSchema.insertMany(submitLocation, (err) => {
-    //   if (err) return console.error(err);
-    //   console.log("SUCCESS");
+    //   console.log(newLocation.length);
+    //   if (location && region) {
+    //     locationSchema.insertMany([
+    //       {
+    //         location,
+    //         region,
+    //       },
+    //     ]);
+    //   }
     // });
   } catch (error) {
     console.error("Db connection is failed ", error);
@@ -157,11 +132,3 @@ server.listen(port, async () => {
 server.on("error", (err) => {
   console.error("Mongo error : 🧨⛔🎇😬 :", err);
 });
-
-// mongoose.connection.on("connected", () => {
-//   console.log("😊Successfully connected to mongo!🥰 😎");
-// });
-
-// mongoose.connection.on("error", (err) => {
-//   console.error("Mongo error : 🧨⛔🎇😬 :", err);
-// });

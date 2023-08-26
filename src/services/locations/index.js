@@ -42,79 +42,34 @@ locationsRouter.get("/search", async (req, res, next) => {
       return next(createHttpError(404, "Please provide a location"));
     }
 
-    // Autocomplete
-
-    // let findLocation = await locationSchema.aggregate([
-    //   [
-    //     {
-    //       $search: {
-    //         index: "autocompleteLocationsWithfoldDiacritics",
-    //         autocomplete: {
-    //           query: searchedLocations,
-    //           path: "location",
-    //           fuzzy: {
-    //             maxEdits: 1,
-    //           },
-    //           tokenOrder: "sequential",
-    //         },
-    //       },
-    //     },
-    //     {
-    //       $limit: 2,
-    //     },
-    //   ],
-    // ]);
-
     // FullText Search
 
     let locations = await locationSchema.aggregate([
       {
         $search: {
           index: "fullTextSearchJSON",
-          compound: {
-            must: [
-              {
-                text: {
-                  query: searchedLocations,
-                  path: "location",
-                  fuzzy: {
-                    maxEdits: 1,
-                  },
-                },
-              },
-            ],
+          text: {
+            query: searchedLocations,
+            path: "location",
+            fuzzy: {
+              maxEdits: 1,
+            },
           },
+
+          // index: "autoCompleteSearchText",
+          // autocomplete: {
+          //   query: searchedLocations,
+          //   path: "location",
+          //   fuzzy: {
+          //     maxEdits: 2,
+          //   },
+          // },
         },
       },
       {
         $limit: 6,
       },
     ]);
-
-    // FullText Search
-
-    // let findLocation = await locationSchema
-    //   .aggregate([
-    //     {
-    //       $search: {
-    //         index: "fullTextSearchJSON",
-    //         text: {
-    //           query: searchedLocations,
-    //           path: {
-    //             wildcard: "*",
-    //           },
-    //         },
-    //       },
-    //     },
-    //   ])
-    //   .limit(6);
-
-    // let findLocation = await locationSchema
-    //   .find({
-    //     location: { $regex: new RegExp(".*" + searchedLocations + ".*", "i") },
-    //   })
-    //   .limit(6)
-    //   .exec();
 
     if (!locations.length)
       return next(createHttpError(404, "Oh Oh, We did not find that location"));
