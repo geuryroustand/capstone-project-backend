@@ -79,6 +79,9 @@ const bookingSchema = new Schema(
     totalPrice: {
       type: String,
     },
+    locale: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
