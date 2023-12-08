@@ -68,7 +68,7 @@ const userSchema = new Schema(
 
 userSchema.pre("save", async function (next) {
   if (this.password || this.userBookingShared) {
-    this.avatar = `https://ui-avatars.com/api/?name=${this.name}+${this.surname}`;
+    this.avatar = `https://ui-avatars.com/api/?name=${this.firstName}+${this.lastName}`;
   }
 
   if (this.isModified("password")) {

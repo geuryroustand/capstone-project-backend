@@ -11,7 +11,7 @@ export const usersRouterRegister = express
   .Router()
   .post("/", userInputValidationMiddleware, async (req, res, next) => {
     const errorsList = validationResult(req);
-
+    // TODO: Sending JWT via Cookie
     const { errors } = errorsList;
 
     if (!errorsList.isEmpty()) return next(createHttpError(400, { errors }));
@@ -22,6 +22,17 @@ export const usersRouterRegister = express
         const newUser = await userSchema.create(req.body);
         const { accessToken, refreshToken } = await JWTAuthenticate(newUser);
         const { firstName, lastName, _id, avatar } = newUser;
+
+        const cookieOptions = {
+          expires: new Date(
+            Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
+          ),
+          httpOnly: true,
+        };
+
+        if (process.env.NODE_ENV === "production") cookieOptions.secure = true;
+
+        res.cookie("token", accessToken, cookieOptions);
 
         res.send({
           accessToken,

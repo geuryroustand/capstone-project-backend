@@ -2,7 +2,7 @@ import express from "express";
 import listEndpoints from "express-list-endpoints";
 import cors from "cors";
 import mongoose from "mongoose";
-
+import cookieParser from "cookie-parser";
 import {
   notFoundErrHandler,
   forbiddenErrHandler,
@@ -59,6 +59,7 @@ server.use(
 
 server.use(cors(corsOpts));
 server.use(express.json());
+server.use(cookieParser());
 server.use(passport.initialize());
 // server.use(passport.session());
 

@@ -8,7 +8,6 @@ const locationsRouter = express.Router();
 locationsRouter.get("/", async (req, res, next) => {
   try {
     const query = q2m(req.query);
-
     const getLocations = await locationSchema
       .find(query.criteria, query.options.fields)
       .limit(query.options.limit)
