@@ -39,7 +39,6 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
         ["puertoPlataB", 219],
       ],
     ],
-
     [
       "puntaCanaA",
       [
@@ -60,7 +59,6 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
         ["santiagoA", 349],
       ],
     ],
-
     [
       "puntaCanaB",
       [
@@ -96,7 +94,21 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
         ["santiagoA", 119],
       ],
     ],
-
+    [
+      "santiagoA",
+      [
+        ["puntaCanaA", 349],
+        ["puntaCanaB", 369],
+        ["laRomanaA", 289],
+        ["laRomanaB", 299],
+        ["santoDomingoA", 189],
+        ["puertoPlataA", 149],
+        ["puertoPlataB", 149],
+        ["samanaA", 229],
+        ["samanaB", 249],
+        ["santiagoA", 49],
+      ],
+    ],
     // Add entries for the rest of the regions
   ]);
   const code = `${pickUp._id}&${dropOff._id}`;
@@ -115,5 +127,5 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
 
   const totalDiscount = Math.floor(5 / 100) * (price * 2);
 
-  return roundtrip === "false" ? price : price * 2 - totalDiscount;
+  return roundtrip === "false" ? price : Math.round(price * 2 - totalDiscount);
 };
