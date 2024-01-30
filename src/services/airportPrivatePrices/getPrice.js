@@ -17,6 +17,20 @@ export const getPrice = (pickUp, dropOff, roundtrip, next) => {
       ],
     ],
     [
+      "santoDomingoB",
+      [
+        ["samanaA", 219],
+        ["samanaB", 229],
+        ["puntaCanaA", 209],
+        ["puntaCanaB", 219],
+        ["laRomanaA", 149],
+        ["laRomanaB", 119],
+        ["santoDomingoA", 49],
+        ["puertoPlataA", 219],
+        ["puertoPlataB", 239],
+      ],
+    ],
+    [
       "samanaA",
       [
         ["samanaA", 77],
