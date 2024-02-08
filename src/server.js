@@ -30,7 +30,7 @@ import facebookStrategy from "./services/auth/facebookOauth.js";
 
 import commentsRouter from "./services/comments/index.js";
 import seoLocationsRouter from "./services/seoLocations/index.js";
-import contactUsRouter from "./services/contactUs/index.js";
+import contactUsRouter from "./services/routers/contactUsRoutes.js";
 
 const server = express();
 
