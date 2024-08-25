@@ -43,32 +43,34 @@ locationsRouter.get("/search", async (req, res, next) => {
 
     // FullText Search
 
-    let locations = await locationSchema.aggregate([
+    const agg = [
       {
         $search: {
-          index: "fullTextSearchJSON",
-          text: {
+          // index: "fullTextSearchJSON",
+          // text: {
+          //   query: searchedLocations,
+          //   path: "location",
+          //   fuzzy: {
+          //     maxEdits: 1,
+          //   },
+          // },
+
+          index: "autocompleteSearch",
+          autocomplete: {
             query: searchedLocations,
             path: "location",
             fuzzy: {
               maxEdits: 1,
             },
           },
-
-          // index: "autoCompleteSearchText",
-          // autocomplete: {
-          //   query: searchedLocations,
-          //   path: "location",
-          //   fuzzy: {
-          //     maxEdits: 2,
-          //   },
-          // },
         },
       },
       {
-        $limit: 6,
+        $limit: 10,
       },
-    ]);
+    ];
+
+    let locations = await locationSchema.aggregate(agg);
 
     if (!locations.length)
       return next(createHttpError(404, "Oh Oh, We did not find that location"));
